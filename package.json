@@ -1,0 +1,46 @@
+{
+  "name": "prettytype-ng",
+  "version": "0.1.0",
+  "description": "Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.",
+  "keywords": [
+    "core",
+    "prettytype-ng",
+    "uiwire"
+  ],
+  "homepage": "http://github.com/carrascoMDD/prettytype-ng",
+  "bugs": {
+    "url": "http://github.com/carrascoMDD/prettytype-ng/issues"
+  },
+  "license": "EUPL-1.1",
+  "author": {
+    "name": "Antonio Carrasco Valero",
+    "email": "carrascomdd@gmail.com"
+  },
+  "files": [
+    "js"
+  ],
+  "main": null,
+  "bin": null,
+  "man": null,
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/carrascoMDD/prettytype-ng.git"
+  },
+  "scripts": {},
+  "config": {},
+  "dependencies": {
+    "prettytype": "0.1.x"
+  },
+  "devDependencies": {
+  },
+  "bin": {
+  },
+  "scripts": {
+  },
+  "maintainers": [
+    {
+      "name": "Antonio Carrasco Valero",
+      "email": "carrascomdd@gmail.com"
+    }
+  ]
+}

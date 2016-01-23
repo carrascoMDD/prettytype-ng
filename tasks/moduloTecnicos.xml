@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Modulo técnicos" default="uglify" basedir=".">
+	
+	<property file="moduloTecnicos.properties" prefix="pc"/>
+	
+	<macrodef name="exec-node">
+		<attribute name="module" description="The name of the NodeJS module to execute" />
+		<attribute name="failonerror" default="true"
+			description="Fail if the exit code is not 0" />
+		<element name="args" implicit="yes"
+			description="Argument to pass to the exec task" />
+		<sequential>
+			<exec executable="cmd.exe" failonerror="@{failonerror}"
+				osfamily="winnt">
+				<arg line="/c cd ${pc.path_grunt}" />
+				<arg line=" &amp; @{module}" />
+				<args />
+			</exec>
+			<exec executable="@{module}" dir="${pc.path_grunt}" failonerror="@{failonerror}"
+				osfamily="unix">
+				<args />
+			</exec>
+		</sequential>
+	</macrodef>
+
+	<target name="uglify">
+	    <exec-node module="grunt --path_js='${pc.path_js}'">
+	        <arg value="default" />
+	    </exec-node>
+	</target>
+	
+	<target name="tests">
+		<sequential>
+			<exec executable="cmd.exe" failonerror="true" osfamily="winnt">
+				<arg line="/c cd ../tests" />
+				<arg line=" &amp; protractor conf.js" />
+			</exec>
+			
+			<exec executable="cd ../tests" failonerror="true" osfamily="unix">
+				<arg line=" &amp;&amp; protractor conf.js" />
+			</exec>
+		</sequential>
+	</target>
+	
+</project>
