@@ -17,18 +17,15 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
-  "_release": "71fde15e25",
+  "_release": "7d2b2ab95f",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "71fde15e252e878c0cca0dbdc740d63f6ae758f2"
+    "commit": "7d2b2ab95ff4757deccc1dc23195c7b4a3ee5982"
   },
   "_source": "git://github.com/carrascoMDD/prettytype.git",
   "_target": "*",
-  "_originalSource": "prettytype",
-  "_direct": true
+  "_originalSource": "prettytype"
 }
