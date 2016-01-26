@@ -1,6 +1,6 @@
 {
-  "name": "prettytype",
-  "description": "Javascript for core modules including a base prototype and prototypes hierarchy, intended to be reused on the Browser as core for i.e. Angular Controllers and Services, as in the uiwire component.",
+  "name": "prettytype-ng",
+  "description": "Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.",
   "main": "",
   "authors": [
     "Antonio Carrasco Valero <carrascomdd@gmail.com>"
@@ -8,9 +8,10 @@
   "license": "EUPL-1.1",
   "keywords": [
     "core",
+    "prettytype",
     "uiwire"
   ],
-  "homepage": "https://github.com/carrascoMDD/prettytype",
+  "homepage": "https://github.com/carrascoMDD/prettytype-ng",
   "moduleType": [
     "globals"
   ],
@@ -18,8 +19,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ],
   "dependencies": {
     "prettytype": "*"
