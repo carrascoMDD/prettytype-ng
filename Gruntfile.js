@@ -76,7 +76,6 @@ module.exports = function(grunt) {
 
                     'src/typesregistry_svce.js',
 
-
                     'src/roots/roots_types.js',
                     'src/roots/overrider_type.js',
                     'src/roots/overrider_svce.js',
@@ -89,6 +88,13 @@ module.exports = function(grunt) {
                     'src/identifying/record_type.js',
                     'src/identifying/recorder_type.js',
                     'src/identifying/recorder_svce.js',
+
+
+                    'src/baseurls/baseurl_types.js',
+                    'src/baseurls/appbaseurl_type.js',
+                    'src/baseurls/appbaseurl_svce.js',
+                    'src/baseurls/apibaseurl_type.js',
+                    'src/baseurls/apibaseurl_svce.js',
 
 
                     'src/common/common_types.js',

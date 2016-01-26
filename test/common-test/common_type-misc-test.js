@@ -1,7 +1,7 @@
 /*
- * common_type-test.js
+ * common_type-misc-test.js
  *
- * Created @author Antonio Carrasco Valero 201601241650
+ * Created @author Antonio Carrasco Valero 201601262224
  *
  *
  ***************************************************************************
@@ -40,98 +40,32 @@ permissions and limitations under the Licence.
 
 
 
-describe("prettytypes-ng Common misc tests", function () {
-
-    var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();
-    console.log( "typeof aModule_TypesRegistrySvceFactory= " + typeof aModule_TypesRegistrySvceFactory);
-
-    var aTypesRegistrySvce = aModule_TypesRegistrySvceFactory();
-    console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-    console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
-
-
-    var aModule_OverriderTypeFactory = ModuleFactory_OverriderType();
-    console.log( "typeof aModule_OverriderTypeFactory= " + typeof aModule_OverriderTypeFactory);
-
-
-    var aModule_OverriderType = aModule_OverriderTypeFactory( aTypesRegistrySvce);
-    console.log( "typeof aModule_OverriderType= " + typeof aModule_OverriderType);
-
-    var aOverriderType_title = "Overrider-Title-test"
-
-    var anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
-    console.log( "typeof anOverrider= " + typeof anOverrider);
-    console.log( "anOverrider keys = " + Object.keys( anOverrider));
+describe("prettytypes-ng CommonType misc tests", function () {
 
 
 
+    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes"));
 
 
-    var aModule_IdentifierTypeFactory = ModuleFactory_IdentifierType();
-    console.log( "typeof aModule_IdentifierTypeFactory= " + typeof aModule_IdentifierTypeFactory);
+    var aModule_CommonType  = null;
+    var aCommon             = null;
 
-
-    var aModule_IdentifierType = aModule_IdentifierTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_IdentifierType= " + typeof aModule_IdentifierType);
-
-    var aIdentifierType_title = "Identifier-Title-test"
-
-    var anIdentifier = new aModule_IdentifierType.Identifier_Constructor( aIdentifierType_title);
-    console.log( "typeof anIdentifier= " + typeof anIdentifier);
-    console.log( "anIdentifier keys = " + Object.keys( anIdentifier));
+    var aCommon_title = "Common-Title-test";
 
 
 
+    beforeEach( inject(function( _IdentifierSvce_, _RecorderSvce_, _CommonType_) {
 
-    var aModule_RecordTypeFactory = ModuleFactory_RecordType();
-    console.log( "typeof aModule_RecordTypeFactory= " + typeof aModule_RecordTypeFactory);
+        aModule_CommonType = _CommonType_;
 
+        // console.log( "typeof aModule_CommonType= " + typeof aModule_CommonType);
+        // console.log( "anIdentifier aModule_CommonType = " + Object.keys( aModule_CommonType));
 
-    var aModule_RecordType = aModule_RecordTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
+        aCommon = new aModule_CommonType.Common_Constructor( aCommon_title, _IdentifierSvce_, _RecorderSvce_);
+        // console.log( "typeof aCommon= " + typeof aCommon);
+        // console.log( "aCommon keys = " + Object.keys( aCommon));
 
-
-
-    var aModule_RecorderTypeFactory = ModuleFactory_RecorderType();
-    console.log( "typeof aModule_RecorderTypeFactory= " + typeof aModule_RecorderTypeFactory);
-
-
-    var aModule_RecorderType = aModule_RecorderTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aModule_IdentifierType,
-        aModule_RecordType
-    );
-    console.log( "typeof aModule_RecorderType= " + typeof aModule_RecorderType);
-
-    var aRecorderType_title = "Recorder-Title-test"
-
-    var aRecorder = new aModule_RecorderType.Recorder_Constructor( aRecorderType_title);
-    console.log( "typeof aRecorder= " + typeof aRecorder);
-    console.log( "aRecorder keys = " + Object.keys( aRecorder));
-
-
-
-
-    var aModule_CommonTypeFactory = ModuleFactory_CommonType();
-    console.log( "typeof aModule_CommonTypeFactory= " + typeof aModule_CommonTypeFactory);
-
-
-    var aModule_CommonType = aModule_CommonTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aRecorder
-    );
-    console.log( "typeof aModule_CommonType= " + typeof aModule_CommonType);
-
-    var aCommonType_title = "Common-Title-test"
-
-    var aCommon = new aModule_CommonType.Common_Constructor( aCommonType_title);
-    console.log( "typeof aCommon= " + typeof aCommon);
-    console.log( "aCommon keys = " + Object.keys( aCommon));
-
+    }));
 
 
 

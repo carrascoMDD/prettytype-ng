@@ -1,9 +1,9 @@
 'use strict';
 
 /*
- * common_types.js
+ * baseurl_types.js
  *
- * Created @author Antonio Carrasco Valero 201409301544
+ * Created @author Antonio Carrasco Valero 201601242344
  *
  *
  ***************************************************************************
@@ -34,12 +34,7 @@ permissions and limitations under the Licence.
 
 
 
-angular.module("commonTypes", [
-    "typesRegistry",
-    "rootsTypes",
-    "identifyingTypes",
-    "baseURLs"
-]);
+angular.module("baseURLs", [ "typesRegistry"]);
 
 
 

@@ -1,7 +1,7 @@
 /*
  * withprominstr_type-test.js
  *
- * Created @author Antonio Carrasco Valero 201601242159
+ * Created @author Antonio Carrasco Valero 201601262242
  *
  *
  ***************************************************************************
@@ -36,163 +36,38 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/common_type.js"/>
+/// <reference path="src/common/withprominstr_type.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng WithProminstr tests", function () {
+describe("prettytypes-ng WithProminstrType tests", function () {
 
 
-    var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();
-    console.log( "typeof aModule_TypesRegistrySvceFactory= " + typeof aModule_TypesRegistrySvceFactory);
 
-    var aTypesRegistrySvce = aModule_TypesRegistrySvceFactory();
-    console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-    console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
+    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes"));
 
 
 
+    var aWithProminstr         = null;
 
-    var aModule_OverriderTypeFactory = ModuleFactory_OverriderType();
-    console.log( "typeof aModule_OverriderTypeFactory= " + typeof aModule_OverriderTypeFactory);
+    var aWithProminstr_title = "Prominstr-Title-test";
 
-    var aModule_OverriderType = aModule_OverriderTypeFactory( aTypesRegistrySvce);
-    console.log( "typeof aModule_OverriderType= " + typeof aModule_OverriderType);
 
-    var aOverriderType_title = "Overrider-Title-test";
+    beforeEach( inject(function( _IdentifierSvce_, _RecorderSvce_, _WithProminstrType_) {
 
-    var anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
-    console.log( "typeof anOverrider= " + typeof anOverrider);
-    console.log( "anOverrider keys = " + Object.keys( anOverrider));
+        // console.log( "typeof aModule_ProminstrType= " + typeof _WithProminstrType_);
+        // console.log( "anIdentifier aModule_ProminstrType = " + Object.keys( _WithProminstrType_));
 
+        aWithProminstr = new _WithProminstrType_.WithProminstr_Constructor( aWithProminstr_title, _IdentifierSvce_, _RecorderSvce_);
+        // console.log( "typeof aWithProminstr= " + typeof aWithProminstr);
+        // console.log( "aWithProminstr keys = " + Object.keys( aWithProminstr));
 
+    }));
 
 
 
-    var aModule_IdentifierTypeFactory = ModuleFactory_IdentifierType();
-    console.log( "typeof aModule_IdentifierTypeFactory= " + typeof aModule_IdentifierTypeFactory);
-
-    var aModule_IdentifierType = aModule_IdentifierTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_IdentifierType= " + typeof aModule_IdentifierType);
-
-    var aIdentifierType_title = "Identifier-Title-test";
-
-    var anIdentifier = new aModule_IdentifierType.Identifier_Constructor( aIdentifierType_title);
-    console.log( "typeof anIdentifier= " + typeof anIdentifier);
-    console.log( "anIdentifier keys = " + Object.keys( anIdentifier));
-
-
-
-
-    var aModule_RecordTypeFactory = ModuleFactory_RecordType();
-    console.log( "typeof aModule_RecordTypeFactory= " + typeof aModule_RecordTypeFactory);
-
-    var aModule_RecordType = aModule_RecordTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
-
-
-
-
-    var aModule_RecorderTypeFactory = ModuleFactory_RecorderType();
-    console.log( "typeof aModule_RecorderTypeFactory= " + typeof aModule_RecorderTypeFactory);
-
-    var aModule_RecorderType = aModule_RecorderTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aModule_IdentifierType,
-        aModule_RecordType
-    );
-    console.log( "typeof aModule_RecorderType= " + typeof aModule_RecorderType);
-
-    var aRecorderType_title = "Recorder-Title-test";
-
-    var aRecorder = new aModule_RecorderType.Recorder_Constructor( aRecorderType_title);
-    console.log( "typeof aRecorder= " + typeof aRecorder);
-    console.log( "aRecorder keys = " + Object.keys( aRecorder));
-
-
-
-
-
-    var aModule_CommonTypeFactory = ModuleFactory_CommonType();
-    console.log( "typeof aModule_CommonTypeFactory= " + typeof aModule_CommonTypeFactory);
-
-    var aModule_CommonType = aModule_CommonTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aRecorder
-    );
-    console.log( "typeof aModule_CommonType= " + typeof aModule_CommonType);
-
-    var aCommonType_title = "Common-Title-test";
-
-    var aCommon = new aModule_CommonType.Common_Constructor( aCommonType_title);
-    console.log( "typeof aCommon= " + typeof aCommon);
-    console.log( "aCommon keys = " + Object.keys( aCommon));
-
-
-
-
-
-
-    var aModule_QngMockFactory = ModuleFactory_QngMock();
-    console.log( "typeof aModule_QngMockFactory= " + typeof aModule_QngMockFactory);
-
-    var aModule_QngMock = aModule_QngMockFactory();
-    console.log( "typeof aModule_QngMock= " + typeof aModule_QngMock);
-
-    var aQngMock = new aModule_QngMock.QngMock_Constructor();
-    console.log( "typeof aQngMock= " + typeof aQngMock);
-    console.log( "aQngMock keys = " + Object.keys( aQngMock));
-
-
-
-
-
-    var aModule_ProminstrTypeFactory = ModuleFactory_ProminstrType();
-    console.log( "typeof aModule_ProminstrTypeFactory= " + typeof aModule_ProminstrTypeFactory);
-
-
-    var aModule_ProminstrType = aModule_ProminstrTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aModule_IdentifierType,
-        aQngMock
-    );
-    console.log( "typeof aModule_ProminstrType= " + typeof aModule_ProminstrType);
-
-    var aProminstrType_title = "Prominstr-Title-test";
-
-    var aProminstr = new aModule_ProminstrType.Prominstr_Constructor( aProminstrType_title);
-    console.log( "typeof aProminstr= " + typeof aProminstr);
-    console.log( "aProminstr keys = " + Object.keys( aProminstr));
-
-
-
-
-
-    var aModule_WithProminstrTypeFactory = ModuleFactory_WithProminstrType();
-    console.log( "typeof aModule_WithProminstrTypeFactory= " + typeof aModule_WithProminstrTypeFactory);
-
-
-    var aModule_WithProminstrType = aModule_WithProminstrTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aProminstr
-    );
-    console.log( "typeof aModule_WithProminstrType= " + typeof aModule_WithProminstrType);
-
-    var aWithProminstrType_title = "WithProminstr-Title-test";
-
-    var aWithProminstr = new aModule_WithProminstrType.WithProminstr_Constructor( aWithProminstrType_title);
-    console.log( "typeof aWithProminstr= " + typeof aWithProminstr);
-    console.log( "aWithProminstr keys = " + Object.keys( aWithProminstr));
 
 
 
@@ -266,7 +141,7 @@ describe("prettytypes-ng WithProminstr tests", function () {
     });
 
     it("Has title WithProminstr_DefaultName", function () {
-        expect( aWithProminstr._v_Title).toBe( aWithProminstrType_title);
+        expect( aWithProminstr._v_Title).toBe( aWithProminstr_title);
     });
 
 

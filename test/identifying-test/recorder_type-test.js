@@ -48,21 +48,20 @@ describe("prettytypes-ng RecorderType tests", function () {
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes"));
 
-    var aModule_RecorderType   = null;
+
     var aRecorder              = null;
 
-    var aRecorderType_title   = "Recorder-Title-test";
+    var aRecorder_title   = "Recorder-Title-test";
 
 
     beforeEach( inject(function( _RecorderType_){
 
-        aModule_RecorderType = _RecorderType_;
-        console.log( "typeof aModule_RecorderType= " + typeof aModule_RecorderType);
+        // console.log( "typeof aModule_RecorderType= " + typeof _RecorderType_);
 
 
-        aRecorder = new aModule_RecorderType.Recorder_Constructor( aRecorderType_title);
-        console.log( "typeof aRecorder= " + typeof aRecorder);
-        console.log( "aRecorder keys = " + Object.keys( aRecorder));
+        aRecorder = new _RecorderType_.Recorder_Constructor( aRecorder_title);
+        // console.log( "typeof aRecorder= " + typeof aRecorder);
+        // console.log( "aRecorder keys = " + Object.keys( aRecorder));
 
     }));
 
@@ -139,7 +138,7 @@ describe("prettytypes-ng RecorderType tests", function () {
     });
 
     it("Has title Recorder_DefaultName", function () {
-        expect( aRecorder._v_Title).toBe( aRecorderType_title);
+        expect( aRecorder._v_Title).toBe( aRecorder_title);
     });
 
 

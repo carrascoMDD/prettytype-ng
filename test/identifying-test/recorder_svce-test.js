@@ -55,8 +55,8 @@ describe("prettytypes-ng RecorderSvce tests", function () {
 
         aRecorder = _RecorderSvce_;
 
-        console.log( "typeof aRecorder= " + typeof aRecorder);
-        console.log( "aRecorder keys = " + Object.keys( aRecorder));
+        // console.log( "typeof aRecorder= " + typeof aRecorder);
+        // console.log( "aRecorder keys = " + Object.keys( aRecorder));
 
     }));
 

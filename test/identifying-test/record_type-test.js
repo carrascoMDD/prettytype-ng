@@ -47,10 +47,9 @@ describe("prettytypes-ng Record tests", function () {
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes"));
 
-    var aModule_RecordType    = null;
     var aRecord               = null;
 
-    var aRecordType_title = "Record-Title-test";
+    var aRecord_title = "Record-Title-test";
 
     var aRecorder_Dummy   = {};
     var aRecordId_Dummy   = "Record-test-id";
@@ -66,10 +65,9 @@ describe("prettytypes-ng Record tests", function () {
 
     beforeEach( inject(function( _RecordType_){
 
-        aModule_RecordType = _RecordType_;
-        console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
+        // console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
 
-        aRecord = new aModule_RecordType.Record_Constructor(
+        aRecord = new _RecordType_.Record_Constructor(
             aRecorder_Dummy,
             aRecordId_Dummy,
             anInstance_Dummy,
@@ -79,8 +77,8 @@ describe("prettytypes-ng Record tests", function () {
             aReason_Dummy,
             aDetail_Dummy
         );
-        console.log( "typeof aRecord= " + typeof aRecord);
-        console.log( "aRecord keys = " + Object.keys( aRecord));
+        // console.log( "typeof aRecord= " + typeof aRecord);
+        // console.log( "aRecord keys = " + Object.keys( aRecord));
 
     }));
 

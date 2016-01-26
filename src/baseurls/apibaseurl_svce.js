@@ -1,15 +1,15 @@
 'use strict';
 
 /*
- * common_types.js
+ * apibaseurl_svce.js
  *
- * Created @author Antonio Carrasco Valero 201409301544
+ * Created @author Antonio Carrasco Valero 201410030329
  *
  *
  ***************************************************************************
 
  Copyright 2014 2015 2016 Antonio Carrasco Valero
- Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
 
 Licensed under the EUPL, Version 1.1 only (the "Licence");
 You may not use this work except in compliance with the
@@ -34,12 +34,17 @@ permissions and limitations under the Licence.
 
 
 
-angular.module("commonTypes", [
-    "typesRegistry",
-    "rootsTypes",
-    "identifyingTypes",
-    "baseURLs"
-]);
+angular.module("baseURLs").factory("APIBaseURLSvce", [
+    "APIBaseURLType",
+function( theSS_APIBaseURLType){
+
+
+    return theSS_APIBaseURLType;
+
+}]);
+
+
+
 
 
 

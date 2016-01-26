@@ -40,237 +40,36 @@ permissions and limitations under the Licence.
 
 
 
-describe("prettytypes-ng CommonCtrl tests", function () {
+describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
-    var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();
-    console.log( "typeof aModule_TypesRegistrySvceFactory= " + typeof aModule_TypesRegistrySvceFactory);
+    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs"));
 
-    var aTypesRegistrySvce = aModule_TypesRegistrySvceFactory();
-    console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-    console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
 
+    var aCommonCtrl    = null;
 
+    var aCommonCtrl_title = "CommonCtrl-Title-test";
 
 
-    var aModule_OverriderTypeFactory = ModuleFactory_OverriderType();
-    console.log( "typeof aModule_OverriderTypeFactory= " + typeof aModule_OverriderTypeFactory);
 
-    var aModule_OverriderType = aModule_OverriderTypeFactory( aTypesRegistrySvce);
-    console.log( "typeof aModule_OverriderType= " + typeof aModule_OverriderType);
+    beforeEach( inject(function(  $rootScope, _IdentifierSvce_, _RecorderSvce_, _CommonCtrlType_) {
 
-    var aOverriderType_title = "Overrider-Title-test";
+        // console.log( "typeof _CommonCtrlType_= " + typeof _CommonCtrlType_);
+        // console.log( "anIdentifier _CommonCtrlType_ = " + Object.keys( _CommonCtrlType_));
 
-    var anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
-    console.log( "typeof anOverrider= " + typeof anOverrider);
-    console.log( "anOverrider keys = " + Object.keys( anOverrider));
+        var aScope = $rootScope.$new();
 
+        aCommonCtrl = new _CommonCtrlType_.CommonCtrl_Constructor(
+            aCommonCtrl_title,
+            _IdentifierSvce_,
+            _RecorderSvce_,
+            aScope
+        );
+        // console.log( "typeof aCommon= " + typeof aCommon);
+        // console.log( "aCommon keys = " + Object.keys( aCommon));
 
+    }));
 
-
-
-    var aModule_IdentifierTypeFactory = ModuleFactory_IdentifierType();
-    console.log( "typeof aModule_IdentifierTypeFactory= " + typeof aModule_IdentifierTypeFactory);
-
-    var aModule_IdentifierType = aModule_IdentifierTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_IdentifierType= " + typeof aModule_IdentifierType);
-
-    var aIdentifierType_title = "Identifier-Title-test";
-
-    var anIdentifier = new aModule_IdentifierType.Identifier_Constructor( aIdentifierType_title);
-    console.log( "typeof anIdentifier= " + typeof anIdentifier);
-    console.log( "anIdentifier keys = " + Object.keys( anIdentifier));
-
-
-
-
-    var aModule_RecordTypeFactory = ModuleFactory_RecordType();
-    console.log( "typeof aModule_RecordTypeFactory= " + typeof aModule_RecordTypeFactory);
-
-    var aModule_RecordType = aModule_RecordTypeFactory( aTypesRegistrySvce, anOverrider);
-    console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
-
-
-
-
-    var aModule_RecorderTypeFactory = ModuleFactory_RecorderType();
-    console.log( "typeof aModule_RecorderTypeFactory= " + typeof aModule_RecorderTypeFactory);
-
-    var aModule_RecorderType = aModule_RecorderTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aModule_IdentifierType,
-        aModule_RecordType
-    );
-    console.log( "typeof aModule_RecorderType= " + typeof aModule_RecorderType);
-
-    var aRecorderType_title = "Recorder-Title-test";
-
-    var aRecorder = new aModule_RecorderType.Recorder_Constructor( aRecorderType_title);
-    console.log( "typeof aRecorder= " + typeof aRecorder);
-    console.log( "aRecorder keys = " + Object.keys( aRecorder));
-
-
-
-
-
-    var aModule_CommonTypeFactory = ModuleFactory_CommonType();
-    console.log( "typeof aModule_CommonTypeFactory= " + typeof aModule_CommonTypeFactory);
-
-    var aModule_CommonType = aModule_CommonTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        anIdentifier,
-        aRecorder
-    );
-    console.log( "typeof aModule_CommonType= " + typeof aModule_CommonType);
-
-
-
-
-
-    var aModule_QngMockFactory = ModuleFactory_QngMock();
-    console.log( "typeof aModule_QngMockFactory= " + typeof aModule_QngMockFactory);
-
-    var aModule_QngMock = aModule_QngMockFactory();
-    console.log( "typeof aModule_QngMock= " + typeof aModule_QngMock);
-
-    var aQngMock = new aModule_QngMock.QngMock_Constructor();
-    console.log( "typeof aQngMock= " + typeof aQngMock);
-    console.log( "aQngMock keys = " + Object.keys( aQngMock));
-
-
-
-
-
-    var aModule_ProminstrTypeFactory = ModuleFactory_ProminstrType();
-    console.log( "typeof aModule_ProminstrTypeFactory= " + typeof aModule_ProminstrTypeFactory);
-
-
-    var aModule_ProminstrType = aModule_ProminstrTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aModule_IdentifierType,
-        aQngMock
-    );
-    console.log( "typeof aModule_ProminstrType= " + typeof aModule_ProminstrType);
-
-    var aProminstrType_title = "Prominstr-Title-test";
-
-    var aProminstr = new aModule_ProminstrType.Prominstr_Constructor( aProminstrType_title);
-    console.log( "typeof aProminstr= " + typeof aProminstr);
-    console.log( "aProminstr keys = " + Object.keys( aProminstr));
-
-
-
-
-
-
-
-
-    var aModule_WithProminstrTypeFactory = ModuleFactory_WithProminstrType();
-    console.log( "typeof aModule_WithProminstrTypeFactory= " + typeof aModule_WithProminstrTypeFactory);
-
-
-    var aModule_WithProminstrType = aModule_WithProminstrTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aProminstr
-    );
-    console.log( "typeof aModule_WithProminstrType= " + typeof aModule_WithProminstrType);
-
-
-    
-    
-    
-    
-    
-
-    var aModule_AppBaseURLFactory = ModuleFactory_AppBaseURLMock();
-    console.log( "typeof aModule_AppBaseURLFactory= " + typeof aModule_AppBaseURLFactory);
-
-
-    var aModule_AppBaseURL = aModule_AppBaseURLFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aModule_IdentifierType,
-        aQngMock
-    );
-    console.log( "typeof aModule_AppBaseURL= " + typeof aModule_AppBaseURL);
-
-    var aAppBaseURL_title = "Prominstr-Title-test";
-
-    var anAppBaseURLSvce = new aModule_AppBaseURL.AppBaseURLMock_Constructor( aAppBaseURL_title);
-    console.log( "typeof anAppBaseURLSvce= " + typeof anAppBaseURLSvce);
-    console.log( "anAppBaseURLSvce keys = " + Object.keys( anAppBaseURLSvce));
-
-
-
-
-
-    var aModule_APIBaseURLFactory = ModuleFactory_APIBaseURLMock();
-    console.log( "typeof aModule_APIBaseURLFactory= " + typeof aModule_APIBaseURLFactory);
-
-
-    var aModule_APIBaseURL = aModule_APIBaseURLFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_CommonType,
-        aModule_IdentifierType,
-        aQngMock
-    );
-    console.log( "typeof aModule_APIBaseURL= " + typeof aModule_APIBaseURL);
-
-    var aAPIBaseURL_title = "Prominstr-Title-test";
-
-    var anAPIBaseURLSvce = new aModule_APIBaseURL.APIBaseURLMock_Constructor( aAPIBaseURL_title);
-    console.log( "typeof anAPIBaseURLSvce= " + typeof anAPIBaseURLSvce);
-    console.log( "anAPIBaseURLSvce keys = " + Object.keys( anAPIBaseURLSvce));
-
-
-
-
-
-    var aModule_LocationngMockFactory = ModuleFactory_QngMock();
-    console.log( "typeof aModule_LocationngMockFactory= " + typeof aModule_LocationngMockFactory);
-
-    var aModule_LocationngMock = aModule_LocationngMockFactory();
-    console.log( "typeof aModule_LocationngMock= " + typeof aModule_LocationngMock);
-
-    var aLocationngMock = new aModule_QngMock.QngMock_Constructor();
-    console.log( "typeof aLocationngMock= " + typeof aLocationngMock);
-    console.log( "aLocationngMock keys = " + Object.keys( aLocationngMock));
-
-
-
-
-
-
-
-
-    var aModule_CommonCtrlTypeFactory = ModuleFactory_CommonCtrlType();
-    console.log( "typeof aModule_CommonCtrlTypeFactory= " + typeof aModule_CommonCtrlTypeFactory);
-
-
-    var aModule_CommonCtrlType = aModule_CommonCtrlTypeFactory(
-        aTypesRegistrySvce,
-        anOverrider,
-        aModule_WithProminstrType,
-        anAppBaseURLSvce,
-        anAPIBaseURLSvce,
-        aLocationngMock
-    );
-    console.log( "typeof aModule_CommonCtrlType= " + typeof aModule_CommonCtrlType);
-
-    var aCommonCtrlType_title = "CommonCtrl-Title-test";
-
-    var aCommonCtrl = new aModule_CommonCtrlType.CommonCtrl_Constructor( aCommonCtrlType_title);
-    console.log( "typeof aCommonCtrl= " + typeof aCommonCtrl);
-    console.log( "aCommonCtrl keys = " + Object.keys( aCommonCtrl));
 
 
 
@@ -345,7 +144,7 @@ describe("prettytypes-ng CommonCtrl tests", function () {
     });
 
     it("Has title CommonCtrl_DefaultName", function () {
-        expect( aCommonCtrl._v_Title).toBe( aCommonCtrlType_title);
+        expect( aCommonCtrl._v_Title).toBe( aCommonCtrl_title);
     });
 
 

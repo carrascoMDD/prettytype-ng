@@ -55,6 +55,13 @@ module.exports = function(config){
             'src/identifying/recorder_svce.js',
 
 
+            'src/baseurls/baseurl_types.js',
+            'src/baseurls/appbaseurl_type.js',
+            'src/baseurls/appbaseurl_svce.js',
+            'src/baseurls/apibaseurl_type.js',
+            'src/baseurls/apibaseurl_svce.js',
+
+
             'src/common/common_types.js',
             'src/common/prominstrexception.js',
             'src/common/common_type.js',
@@ -79,6 +86,16 @@ module.exports = function(config){
             'test/identifying-test/recorder_type-test.js',
             'test/identifying-test/recorder_svce-test.js',
 
+            'test/common-test/common_type-test.js',
+            'test/common-test/common_type-record-test.js',
+            'test/common-test/common_type-misc-test.js',
+            'test/common-test/prominstr_type-test.js',
+            'test/common-test/prominstr_svce-test.js',
+            'test/common-test/withprominstr_type-test.js',
+
+            'test/common-test/common_ctrl_type-test.js',
+
+            'test/common-test/common_svce_type-test.js',
 
         ],
 
@@ -88,7 +105,7 @@ module.exports = function(config){
 
         browsers : ['Chrome'],
 
-        port:  9876,
+        port:  9877,
         colors:  true ,
 
         logLevel: config.LOG_INFO,

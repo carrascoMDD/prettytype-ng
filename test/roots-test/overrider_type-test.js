@@ -41,22 +41,21 @@ permissions and limitations under the Licence.
 
 describe("prettytypes-ng OverriderType tests", function () {
 
+
+
     beforeEach( module( "typesRegistry", "rootsTypes"));
 
-    var aModule_OverriderType = null;
+
     var anOverrider           = null;
 
+    var aOverrider_title = "Overrider-Title-test";
 
-    var aOverriderType_title = "Overrider-Title-test";
 
+    beforeEach( inject(function( _OverriderType_){
 
-    beforeEach( inject(function(_TypesRegistrySvce_, _OverriderType_){
-
-        aModule_OverriderType = _OverriderType_;
-
-        anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
-        console.log( "typeof anOverrider= " + typeof anOverrider);
-        console.log( "anOverrider keys = " + Object.keys( anOverrider));
+        anOverrider = new _OverriderType_.Overrider_Constructor( aOverrider_title);
+        // console.log( "typeof anOverrider= " + typeof anOverrider);
+        // console.log( "anOverrider keys = " + Object.keys( anOverrider));
     }));
 
 
@@ -130,7 +129,7 @@ describe("prettytypes-ng OverriderType tests", function () {
     });
 
     it("Has title Overrider_DefaultName", function () {
-        expect( anOverrider._v_Title).toBe( aOverriderType_title);
+        expect( anOverrider._v_Title).toBe( aOverrider_title);
     });
 
 

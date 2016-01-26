@@ -41,17 +41,19 @@ permissions and limitations under the Licence.
 
 describe("prettytypes-ng OverriderSvce tests", function () {
 
+
+
     beforeEach( module( "typesRegistry", "rootsTypes"));
 
     var anOverrider           = null;
 
 
 
-    beforeEach( inject(function(_TypesRegistrySvce_, _OverriderSvce_){
+    beforeEach( inject(function( _OverriderSvce_){
 
         anOverrider = _OverriderSvce_;
-        console.log( "typeof anOverrider= " + typeof anOverrider);
-        console.log( "anOverrider keys = " + Object.keys( anOverrider));
+        // console.log( "typeof anOverrider= " + typeof anOverrider);
+        // console.log( "anOverrider keys = " + Object.keys( anOverrider));
     }));
 
 

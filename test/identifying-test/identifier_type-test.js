@@ -47,7 +47,7 @@ describe("prettytypes-ng Identifier tests", function () {
     var aModule_IdentifierType = null;
     var anIdentifier           = null;
 
-    var aIdentifierType_title = "Identifier-Title-test";
+    var aIdentifier_title = "Identifier-Title-test";
 
 
 
@@ -56,9 +56,9 @@ describe("prettytypes-ng Identifier tests", function () {
         aModule_IdentifierType = _IdentifierType_;
 
 
-        anIdentifier = new aModule_IdentifierType.Identifier_Constructor( aIdentifierType_title);
-        console.log( "typeof anIdentifier= " + typeof anIdentifier);
-        console.log( "anIdentifier keys = " + Object.keys( anIdentifier));
+        anIdentifier = new aModule_IdentifierType.Identifier_Constructor( aIdentifier_title);
+        // console.log( "typeof anIdentifier= " + typeof anIdentifier);
+        // console.log( "anIdentifier keys = " + Object.keys( anIdentifier));
 
     }));
 
@@ -136,7 +136,7 @@ describe("prettytypes-ng Identifier tests", function () {
     });
 
     it("Has title Identifier_DefaultName", function () {
-        expect( anIdentifier._v_Title).toBe( aIdentifierType_title);
+        expect( anIdentifier._v_Title).toBe( aIdentifier_title);
     });
 
 

@@ -32,13 +32,13 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/prominstr_type.js"/>
+/// <reference path="src/common/prominstr_svce.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng ProminstrType tests", function () {
+describe("prettytypes-ng ProminstrSvce tests", function () {
 
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes"));
@@ -47,17 +47,14 @@ describe("prettytypes-ng ProminstrType tests", function () {
 
     var aProminstr                = null;
 
-    var aProminstr_title = "Prominstr-Title-test";
 
 
-    beforeEach( inject(function( _IdentifierSvce_, _RecorderSvce_, _ProminstrType_) {
+    beforeEach( inject(function( _ProminstrSvce_) {
 
-        // console.log( "typeof aModule_CommonType= " + typeof _ProminstrType_);
-        // console.log( "anIdentifier aModule_CommonType = " + Object.keys( _ProminstrType_));
+        aProminstr = _ProminstrSvce_;
 
-        aProminstr = new _ProminstrType_.Prominstr_Constructor( aProminstr_title, _IdentifierSvce_, _RecorderSvce_);
         // console.log( "typeof aProminstr= " + typeof aProminstr);
-        // console.log( "aCommon keys = " + Object.keys( aProminstr));
+        // console.log( "aProminstr keys = " + Object.keys( aProminstr));
 
     }));
 
@@ -134,7 +131,7 @@ describe("prettytypes-ng ProminstrType tests", function () {
     });
 
     it("Has title Prominstr_DefaultName", function () {
-        expect( aProminstr._v_Title).toBe( aProminstr_title);
+        expect( aProminstr._v_Title).toBe( "Prominstr_Service");
     });
 
 
