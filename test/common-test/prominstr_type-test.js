@@ -38,7 +38,7 @@ permissions and limitations under the Licence.
 
 
 
-describe("Prominstr tests", function () {
+describe("prettytypes-ng Prominstr tests", function () {
 
 
     var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();

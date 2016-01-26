@@ -1,7 +1,7 @@
 /*
  * typesregistry-test.js
  *
- * Created @author Antonio Carrasco Valero 201601241600
+ * Created @author Antonio Carrasco Valero 201601261900
  *
  *
  ***************************************************************************
@@ -37,7 +37,7 @@
 
 
 
-describe("TypesRegistry tests", function () {
+describe("prettytypes-ng TypesRegistry tests", function () {
 
     beforeEach( module( "typesRegistry"));
 
@@ -50,7 +50,6 @@ describe("TypesRegistry tests", function () {
         // console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
 
     }));
-
 
 
     it("Has module defined", function () {

@@ -14,6 +14,26 @@ module.exports = function(config){
 
             'bower_components/prettytype/src/**/*.js',
 
+            /* commented out during dev
+            'bower_components/prettytype/test/typesregistry-test.js',
+            'bower_components/prettytype/test/roots-test/overrider_type-test.js',
+            'bower_components/prettytype/test/identifying-test/identifier_type-test.js',
+            'bower_components/prettytype/test/identifying-test/record_type-test.js',
+            'bower_components/prettytype/test/identifying-test/recorder_type-test.js',
+            'bower_components/prettytype/test/common-test/common_type-test.js',
+            'bower_components/prettytype/test/common-test/common_type-record-test.js',
+            'bower_components/prettytype/test/common-test/common_type-misc-test.js',
+            'bower_components/prettytype/test/common-test/qngmock.js',
+            'bower_components/prettytype/test/common-test/prominstr_type-test.js',
+            'bower_components/prettytype/test/common-test/withprominstr_type-test.js',
+            'bower_components/prettytype/test/common-test/appbaseurlmock.js',
+            'bower_components/prettytype/test/common-test/apibaseurlmock.js',
+            'bower_components/prettytype/test/common-test/locationngmock.js',
+            'bower_components/prettytype/test/common-test/common_ctrl_type-test.js',
+            'bower_components/prettytype/test/common-test/common_svce_type-test.js',
+            'bower_components/prettytype/test/common-test/prominstrexception-test.js',
+             */
+
 
             'src/utils/exceptiondetails_svce.js',
             'src/utils/decoratesystemprototypes_svce.js',
@@ -49,7 +69,12 @@ module.exports = function(config){
 
 
 
-            'test/typesregistry-test.js'
+            'test/typesregistry-test.js',
+            'test/roots-test/overrider_type-test.js',
+            'test/roots-test/overrider_svce-test.js',
+            'test/identifying-test/record_type-test.js'
+
+
         ],
 
         autoWatch : true,

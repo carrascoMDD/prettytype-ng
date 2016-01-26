@@ -1,7 +1,7 @@
 /*
- * overrider_type-test.js
+ * overrider_svce-test.js
  *
- * Created @author Antonio Carrasco Valero 201601261930
+ * Created @author Antonio Carrasco Valero 201601261940
  *
  *
  ***************************************************************************
@@ -33,34 +33,29 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/overrider_type.js"/>
+/// <reference path="src/common/overrider_svce.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng OverriderType tests", function () {
+describe("prettytypes-ng OverriderSvce tests", function () {
 
     beforeEach( module( "typesRegistry", "rootsTypes"));
 
     var aTypesRegistrySvce    = null;
-    var aModule_OverriderType = null;
     var anOverrider           = null;
 
 
-    var aOverriderType_title = "Overrider-Title-test";
 
-
-    beforeEach( inject(function(_TypesRegistrySvce_, _OverriderType_){
+    beforeEach( inject(function(_TypesRegistrySvce_, _OverriderSvce_){
         aTypesRegistrySvce = _TypesRegistrySvce_;
 
         // console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
         // console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
 
-        aModule_OverriderType = _OverriderType_;
 
-
-        anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
+        anOverrider = _OverriderSvce_;
         console.log( "typeof anOverrider= " + typeof anOverrider);
         console.log( "anOverrider keys = " + Object.keys( anOverrider));
     }));
@@ -135,8 +130,8 @@ describe("prettytypes-ng OverriderType tests", function () {
         expect( anOverrider._v_Type).toBe( "Overrider");
     });
 
-    it("Has title Overrider_DefaultName", function () {
-        expect( anOverrider._v_Title).toBe( aOverriderType_title);
+    it("Has title Overrider_Service", function () {
+        expect( anOverrider._v_Title).toBe( "Overrider_Service");
     });
 
 

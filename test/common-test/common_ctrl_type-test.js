@@ -40,7 +40,7 @@ permissions and limitations under the Licence.
 
 
 
-describe("CommonCtrl tests", function () {
+describe("prettytypes-ng CommonCtrl tests", function () {
 
 
     var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();

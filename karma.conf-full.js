@@ -17,6 +17,7 @@ module.exports = function(config){
             'bower_components/prettytype/test/typesregistry-test.js',
             'bower_components/prettytype/test/roots-test/overrider_type-test.js',
             'bower_components/prettytype/test/identifying-test/identifier_type-test.js',
+            'bower_components/prettytype/test/identifying-test/record_type-test.js',
             'bower_components/prettytype/test/identifying-test/recorder_type-test.js',
             'bower_components/prettytype/test/common-test/common_type-test.js',
             'bower_components/prettytype/test/common-test/common_type-record-test.js',
