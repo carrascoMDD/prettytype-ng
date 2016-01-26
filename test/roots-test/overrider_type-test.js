@@ -43,7 +43,6 @@ describe("prettytypes-ng OverriderType tests", function () {
 
     beforeEach( module( "typesRegistry", "rootsTypes"));
 
-    var aTypesRegistrySvce    = null;
     var aModule_OverriderType = null;
     var anOverrider           = null;
 
@@ -52,13 +51,8 @@ describe("prettytypes-ng OverriderType tests", function () {
 
 
     beforeEach( inject(function(_TypesRegistrySvce_, _OverriderType_){
-        aTypesRegistrySvce = _TypesRegistrySvce_;
-
-        // console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-        // console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
 
         aModule_OverriderType = _OverriderType_;
-
 
         anOverrider = new aModule_OverriderType.Overrider_Constructor( aOverriderType_title);
         console.log( "typeof anOverrider= " + typeof anOverrider);

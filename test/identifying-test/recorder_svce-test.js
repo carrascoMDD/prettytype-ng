@@ -1,7 +1,7 @@
 /*
- * recorder_type-test.js
+ * recorder_svce-test.js
  *
- * Created @author Antonio Carrasco Valero 201601241640
+ * Created @author Antonio Carrasco Valero 201601242042
  *
  *
  ***************************************************************************
@@ -35,32 +35,26 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/identifying/recorder_type.js"/>
+/// <reference path="src/identifying/recorder_svce.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng RecorderType tests", function () {
+describe("prettytypes-ng RecorderSvce tests", function () {
 
 
 
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes"));
 
-    var aModule_RecorderType   = null;
     var aRecorder              = null;
 
-    var aRecorderType_title   = "Recorder-Title-test";
 
+    beforeEach( inject(function( _RecorderSvce_){
 
-    beforeEach( inject(function( _RecorderType_){
+        aRecorder = _RecorderSvce_;
 
-        aModule_RecorderType = _RecorderType_;
-        console.log( "typeof aModule_RecorderType= " + typeof aModule_RecorderType);
-
-
-        aRecorder = new aModule_RecorderType.Recorder_Constructor( aRecorderType_title);
         console.log( "typeof aRecorder= " + typeof aRecorder);
         console.log( "aRecorder keys = " + Object.keys( aRecorder));
 
@@ -139,7 +133,7 @@ describe("prettytypes-ng RecorderType tests", function () {
     });
 
     it("Has title Recorder_DefaultName", function () {
-        expect( aRecorder._v_Title).toBe( aRecorderType_title);
+        expect( aRecorder._v_Title).toBe( "Service_Recorder");
     });
 
 

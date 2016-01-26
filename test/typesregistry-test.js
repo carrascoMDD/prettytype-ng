@@ -44,6 +44,7 @@ describe("prettytypes-ng TypesRegistry tests", function () {
     var aTypesRegistrySvce = null;
 
     beforeEach( inject(function(_TypesRegistrySvce_){
+
         aTypesRegistrySvce = _TypesRegistrySvce_;
 
         // console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);

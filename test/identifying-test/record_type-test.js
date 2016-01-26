@@ -47,8 +47,6 @@ describe("prettytypes-ng Record tests", function () {
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes"));
 
-    var aTypesRegistrySvce    = null;
-    var anOverrider           = null;
     var aModule_RecordType    = null;
     var aRecord               = null;
 
@@ -66,17 +64,7 @@ describe("prettytypes-ng Record tests", function () {
 
 
 
-
-    beforeEach( inject(function(_TypesRegistrySvce_, _OverriderSvce_, _RecordType_){
-        aTypesRegistrySvce = _TypesRegistrySvce_;
-
-        // console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-        // console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
-
-
-        anOverrider = _OverriderSvce_;
-        console.log( "typeof anOverrider= " + typeof anOverrider);
-        console.log( "anOverrider keys = " + Object.keys( anOverrider));
+    beforeEach( inject(function( _RecordType_){
 
         aModule_RecordType = _RecordType_;
         console.log( "typeof aModule_RecordType= " + typeof aModule_RecordType);
