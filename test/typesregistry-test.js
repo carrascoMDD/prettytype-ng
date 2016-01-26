@@ -39,12 +39,18 @@
 
 describe("TypesRegistry tests", function () {
 
-    var aModule_TypesRegistrySvceFactory = ModuleFactory_TypesRegistrySvce();
-    console.log( "typeof aModule_TypesRegistrySvceFactory= " + typeof aModule_TypesRegistrySvceFactory);
+    beforeEach( module( "typesRegistry"));
 
-    var aTypesRegistrySvce = aModule_TypesRegistrySvceFactory();
-    console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
-    console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
+    var aTypesRegistrySvce = null;
+
+    beforeEach( inject(function(_TypesRegistrySvce_){
+        aTypesRegistrySvce = _TypesRegistrySvce_;
+
+        // console.log( "typeof aTypesRegistrySvce= " + typeof aTypesRegistrySvce);
+        // console.log( "aTypesRegistrySvce keys = " + Object.keys( aTypesRegistrySvce));
+
+    }));
+
 
 
     it("Has module defined", function () {

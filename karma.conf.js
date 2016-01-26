@@ -9,6 +9,8 @@ module.exports = function(config){
             /* Order of files is mandatory as stated to the dependency injection in angular module definitions */
 
             'bower_components/angular/angular.js',
+            'bower_components/angular-mocks/angular-mocks.js',
+
 
             'bower_components/prettytype/src/**/*.js',
 
@@ -45,40 +47,9 @@ module.exports = function(config){
             'src/common/common_ctrl.js',
 
 
-            'bower_components/prettytype/test/common-test/typesregistry-test.js',
-            'bower_components/prettytype/test/roots-test/overrider_type-test.js',
-            'bower_components/prettytype/test/identifying-test/identifier_type-test.js',
-            'bower_components/prettytype/test/identifying-test/recorder_type-test.js',
-            'bower_components/prettytype/test/common-test/common_type-test.js',
-            'bower_components/prettytype/test/common-test/common_type-record-test.js',
-            'bower_components/prettytype/test/common-test/common_type-misc-test.js',
-            'bower_components/prettytype/test/common-test/qngmock.js',
-            'bower_components/prettytype/test/common-test/prominstr_type-test.js',
-            'bower_components/prettytype/test/common-test/withprominstr_type-test.js',
-            'bower_components/prettytype/test/common-test/appbaseurlmock.js',
-            'bower_components/prettytype/test/common-test/apibaseurlmock.js',
-            'bower_components/prettytype/test/common-test/locationngmock.js',
-            'bower_components/prettytype/test/common-test/common_ctrl_type-test.js',
-            'bower_components/prettytype/test/common-test/common_svce_type-test.js',
-            'bower_components/prettytype/test/common-test/prominstrexception-test.js',
 
 
-            'test/common-test/typesregistry-test.js',
-            'test/roots-test/overrider_type-test.js',
-            'test/identifying-test/identifier_type-test.js',
-            'test/identifying-test/recorder_type-test.js',
-            'test/common-test/common_type-test.js',
-            'test/common-test/common_type-record-test.js',
-            'test/common-test/common_type-misc-test.js',
-            'test/common-test/qngmock.js',
-            'test/common-test/prominstr_type-test.js',
-            'test/common-test/withprominstr_type-test.js',
-            'test/common-test/appbaseurlmock.js',
-            'test/common-test/apibaseurlmock.js',
-            'test/common-test/locationngmock.js',
-            'test/common-test/common_ctrl_type-test.js',
-            'test/common-test/common_svce_type-test.js',
-            'test/common-test/prominstrexception-test.js'
+            'test/typesregistry-test.js'
         ],
 
         autoWatch : true,
