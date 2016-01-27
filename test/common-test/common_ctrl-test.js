@@ -1,5 +1,5 @@
 /*
- * common_ctrl_type-test.js
+ * common_ctrl-test.js
  *
  * Created @author Antonio Carrasco Valero 201601250103
  *
@@ -31,6 +31,9 @@ permissions and limitations under the Licence.
  */
 
 
+/* ACV OJO TODO 201601270204 Controller tests are not suposed to test the controller, but the changes on the $scope,
+  and instantiation of the controller is done by the _$controller_
+  But it does not supply a properly initialized instance of controller.
 
 
 
@@ -40,33 +43,33 @@ permissions and limitations under the Licence.
 
 
 
-describe("prettytypes-ng CommonCtrlType tests", function () {
+describe("prettytypes-ng CommonCtrl tests", function () {
 
 
     beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs"));
 
 
+    var aRootScope     = null;
+    var aController    = null;
+
     var aCommonCtrl    = null;
 
-    var aCommonCtrl_title = "CommonCtrlType-Title-test";
 
 
+    beforeEach( inject(function( _$rootScope_, _$controller_) {
 
-    beforeEach( inject(function(  $rootScope, _IdentifierSvce_, _RecorderSvce_, _CommonCtrlType_) {
+        // console.log( "typeof _CommonCtrl_= " + typeof _CommonCtrl_);
+        // console.log( "anIdentifier _CommonCtrl_ = " + Object.keys( _CommonCtrl_));
 
-        // console.log( "typeof _CommonCtrlType_= " + typeof _CommonCtrlType_);
-        // console.log( "anIdentifier _CommonCtrlType_ = " + Object.keys( _CommonCtrlType_));
+        aRootScope = _$rootScope_;
 
-        var aScope = $rootScope.$new();
+        aController = _$controller_;
 
-        aCommonCtrl = new _CommonCtrlType_.CommonCtrl_Constructor(
-            aCommonCtrl_title,
-            _IdentifierSvce_,
-            _RecorderSvce_,
-            aScope
-        );
-        // console.log( "typeof aCommon= " + typeof aCommon);
-        // console.log( "aCommon keys = " + Object.keys( aCommon));
+        console.log( "typeof aRootScope= " + typeof aRootScope);
+        console.log( "aRootScope keys = " + Object.keys( aRootScope));
+
+        console.log( "typeof aController= " + typeof aController);
+        console.log( "aController keys = " + Object.keys( aController));
 
     }));
 
@@ -76,6 +79,8 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
     it("Has module defined", function () {
+        aRootScope = aRootScope.$new();
+        aCommonCtrl = aController( "CommonCtrl", { "$scope": aRootScope});
         expect( aCommonCtrl._v_Module).not.toBeUndefined();
     });
 
@@ -337,4 +342,4 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
 });
-
+ */

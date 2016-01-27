@@ -1,5 +1,5 @@
 /*
- * common_ctrl_type.js
+ * reuse_ctrl_type.js
  *
  * Created @author Antonio Carrasco Valero 201601250103
  *
@@ -34,39 +34,39 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/common_ctrl_type.js"/>
+/// <reference path="src/reuse/reuse_ctrl_type.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng CommonCtrlType tests", function () {
+describe("prettytypes-ng ReuseCtrlType tests", function () {
 
 
-    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs"));
+    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs", "reuseCtrlTypes"));
 
 
-    var aCommonCtrl    = null;
+    var aReuseCtrl    = null;
 
-    var aCommonCtrl_title = "CommonCtrl-Title-test";
+    var aReuseCtrl_title = "ReuseCtrlType-Title-test";
 
 
 
-    beforeEach( inject(function(  $rootScope, _IdentifierSvce_, _RecorderSvce_, _CommonCtrlType_) {
+    beforeEach( inject(function(  $rootScope, _IdentifierSvce_, _RecorderSvce_, _ReuseCtrlType_) {
 
-        // console.log( "typeof _CommonCtrlType_= " + typeof _CommonCtrlType_);
-        // console.log( "anIdentifier _CommonCtrlType_ = " + Object.keys( _CommonCtrlType_));
+        // console.log( "typeof _ReuseCtrlType_= " + typeof _ReuseCtrlType_);
+        // console.log( "anIdentifier _ReuseCtrlType_ = " + Object.keys( _ReuseCtrlType_));
 
         var aScope = $rootScope.$new();
 
-        aCommonCtrl = new _CommonCtrlType_.CommonCtrl_Constructor(
-            aCommonCtrl_title,
+        aReuseCtrl = new _ReuseCtrlType_.ReuseCtrl_Constructor(
+            aReuseCtrl_title,
             _IdentifierSvce_,
             _RecorderSvce_,
             aScope
         );
-        // console.log( "typeof aCommon= " + typeof aCommon);
-        // console.log( "aCommon keys = " + Object.keys( aCommon));
+        // console.log( "typeof aReuse= " + typeof aReuse);
+        // console.log( "aReuse keys = " + Object.keys( aReuse));
 
     }));
 
@@ -76,85 +76,85 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
     it("Has module defined", function () {
-        expect( aCommonCtrl._v_Module).not.toBeUndefined();
+        expect( aReuseCtrl._v_Module).not.toBeUndefined();
     });
 
     it("Has module not null", function () {
-        expect( aCommonCtrl._v_Module).not.toBeNull( null);
+        expect( aReuseCtrl._v_Module).not.toBeNull( null);
     });
 
-    it("Has module ModuleName common_ctrl_type", function () {
-        expect( aCommonCtrl._v_Module.ModuleName).toBe( "common_ctrl_type");
+    it("Has module ModuleName reuse_ctrl_type", function () {
+        expect( aReuseCtrl._v_Module.ModuleName).toBe( "reuse_ctrl_type");
     });
 
-    it("Has module ModulePackages common", function () {
-        expect( aCommonCtrl._v_Module.ModulePackages).toBe( "common");
+    it("Has module ModulePackages reuse", function () {
+        expect( aReuseCtrl._v_Module.ModulePackages).toBe( "test/reuse_commons/reuse_ctrl");
     });
 
-    it("Has module ModuleFullName common.commonctrl", function () {
-        expect( aCommonCtrl._v_Module.ModuleFullName).toBe( "common/common_ctrl_type");
+    it("Has module ModuleFullName reuse.reusectrl", function () {
+        expect( aReuseCtrl._v_Module.ModuleFullName).toBe( "test/reuse_commons/reuse_ctrl/reuse_ctrl_type");
     });
 
-    it("Has module CommonCtrl_Prototype defined", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_Prototype).not.toBeUndefined();
+    it("Has module ReuseCtrl_Prototype defined", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_Prototype).not.toBeUndefined();
     });
 
-    it("Has module CommonCtrl_Prototype not null", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_Prototype).not.toBeNull( null);
+    it("Has module ReuseCtrl_Prototype not null", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_Prototype).not.toBeNull( null);
     });
 
-    it("Has module CommonCtrl_Constructor defined", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_Constructor).not.toBeUndefined();
+    it("Has module ReuseCtrl_Constructor defined", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_Constructor).not.toBeUndefined();
     });
 
-    it("Has module CommonCtrl_Constructor not null", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_Constructor).not.toBeNull( null);
+    it("Has module ReuseCtrl_Constructor not null", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_Constructor).not.toBeNull( null);
     });
 
-    it("Has module CommonCtrl_SuperPrototypeConstructor defined", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_SuperPrototypeConstructor).not.toBeUndefined();
+    it("Has module ReuseCtrl_SuperPrototypeConstructor defined", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_SuperPrototypeConstructor).not.toBeUndefined();
     });
 
-    it("Has module CommonCtrl_SuperPrototypeConstructor not null", function () {
-        expect( aCommonCtrl._v_Module.CommonCtrl_SuperPrototypeConstructor).not.toBeNull( null);
+    it("Has module ReuseCtrl_SuperPrototypeConstructor not null", function () {
+        expect( aReuseCtrl._v_Module.ReuseCtrl_SuperPrototypeConstructor).not.toBeNull( null);
     });
 
 
 
     it("Has _v_Prototype defined", function () {
-        expect( aCommonCtrl._v_Prototype).not.toBeUndefined();
+        expect( aReuseCtrl._v_Prototype).not.toBeUndefined();
     });
 
-    it("Has _v_Prototype module CommonCtrl_Prototype", function () {
-        expect( aCommonCtrl._v_Prototype).toBe( aCommonCtrl._v_Module.CommonCtrl_Prototype);
+    it("Has _v_Prototype module ReuseCtrl_Prototype", function () {
+        expect( aReuseCtrl._v_Prototype).toBe( aReuseCtrl._v_Module.ReuseCtrl_Prototype);
     });
 
-    it("Has _v_Prototype_CommonCtrl defined", function () {
-        expect( aCommonCtrl._v_Prototype_CommonCtrl).not.toBeUndefined();
+    it("Has _v_Prototype_ReuseCtrl defined", function () {
+        expect( aReuseCtrl._v_Prototype_ReuseCtrl).not.toBeUndefined();
     });
 
-    it("Has _v_Prototype_CommonCtrl module CommonCtrl_Prototype", function () {
-        expect( aCommonCtrl._v_Prototype).toBe( aCommonCtrl._v_Module.CommonCtrl_Prototype);
+    it("Has _v_Prototype_ReuseCtrl module ReuseCtrl_Prototype", function () {
+        expect( aReuseCtrl._v_Prototype).toBe( aReuseCtrl._v_Module.ReuseCtrl_Prototype);
     });
 
 
 
-    it("Has _v_Type CommonCtrl", function () {
-        expect( aCommonCtrl._v_Type).toBe( "CommonCtrl");
+    it("Has _v_Type ReuseCtrl", function () {
+        expect( aReuseCtrl._v_Type).toBe( "ReuseCtrl");
     });
 
-    it("Has title CommonCtrl_DefaultName", function () {
-        expect( aCommonCtrl._v_Title).toBe( aCommonCtrl_title);
+    it("Has title ReuseCtrl_DefaultName", function () {
+        expect( aReuseCtrl._v_Title).toBe( aReuseCtrl_title);
     });
 
 
 
     it("Has fFullTypeNameString defined", function () {
-        expect( aCommonCtrl.fFullTypeNameString).not.toBeUndefined();
+        expect( aReuseCtrl.fFullTypeNameString).not.toBeUndefined();
     });
 
     it("Has fFullTypeNameString typeof function", function () {
-        expect( typeof aCommonCtrl.fFullTypeNameString).toBe( "function");
+        expect( typeof aReuseCtrl.fFullTypeNameString).toBe( "function");
     });
 
 
@@ -162,42 +162,42 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
     it("Has fIdentifyingJSON defined", function () {
-        expect( aCommonCtrl.fIdentifyingJSON).not.toBeUndefined();
+        expect( aReuseCtrl.fIdentifyingJSON).not.toBeUndefined();
     });
 
     it("Has fIdentifyingJSON typeof function", function () {
-        expect( typeof aCommonCtrl.fIdentifyingJSON).toBe( "function");
+        expect( typeof aReuseCtrl.fIdentifyingJSON).toBe( "function");
     });
 
     it("Has fIdentifyingJSON() not null", function () {
-        expect( aCommonCtrl.fIdentifyingJSON()).not.toBeNull();
+        expect( aReuseCtrl.fIdentifyingJSON()).not.toBeNull();
     });
 
     it("Has fIdentifyingJSON() type _v_Type", function () {
-        expect( aCommonCtrl.fIdentifyingJSON().type).toBe( aCommonCtrl._v_Type);
+        expect( aReuseCtrl.fIdentifyingJSON().type).toBe( aReuseCtrl._v_Type);
     });
 
     it("Has fIdentifyingJSON() id _v_Id", function () {
-        expect( aCommonCtrl.fIdentifyingJSON().id).toBe( aCommonCtrl._v_Id);
+        expect( aReuseCtrl.fIdentifyingJSON().id).toBe( aReuseCtrl._v_Id);
     });
 
 
 
 
     it("Has fIdentifyingString defined", function () {
-        expect( aCommonCtrl.fIdentifyingString).not.toBeUndefined();
+        expect( aReuseCtrl.fIdentifyingString).not.toBeUndefined();
     });
 
     it("Has fIdentifyingString typeof function", function () {
-        expect( typeof aCommonCtrl.fIdentifyingString).toBe( "function");
+        expect( typeof aReuseCtrl.fIdentifyingString).toBe( "function");
     });
 
     it("Has fIdentifyingString() not null", function () {
-        expect( aCommonCtrl.fIdentifyingString()).not.toBeNull();
+        expect( aReuseCtrl.fIdentifyingString()).not.toBeNull();
     });
 
     it("Has fIdentifyingString() JSON.stringify( fIdentifyingJSON())", function () {
-        expect( aCommonCtrl.fIdentifyingString()).toBe( JSON.stringify( aCommonCtrl.fIdentifyingJSON()));
+        expect( aReuseCtrl.fIdentifyingString()).toBe( JSON.stringify( aReuseCtrl.fIdentifyingJSON()));
     });
 
 
@@ -205,27 +205,27 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
     it("Has fIdentifyingWithTitleJSON defined", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleJSON).not.toBeUndefined();
+        expect( aReuseCtrl.fIdentifyingWithTitleJSON).not.toBeUndefined();
     });
 
     it("Has fIdentifyingWithTitleJSON typeof function", function () {
-        expect( typeof aCommonCtrl.fIdentifyingWithTitleJSON).toBe( "function");
+        expect( typeof aReuseCtrl.fIdentifyingWithTitleJSON).toBe( "function");
     });
 
     it("Has fIdentifyingWithTitleJSON() not null", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleJSON()).not.toBeNull();
+        expect( aReuseCtrl.fIdentifyingWithTitleJSON()).not.toBeNull();
     });
 
     it("Has fIdentifyingWithTitleJSON() type _v_Type", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleJSON().type).toBe( aCommonCtrl._v_Type);
+        expect( aReuseCtrl.fIdentifyingWithTitleJSON().type).toBe( aReuseCtrl._v_Type);
     });
 
     it("Has fIdentifyingWithTitleJSON() id _v_Id", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleJSON().id).toBe( aCommonCtrl._v_Id);
+        expect( aReuseCtrl.fIdentifyingWithTitleJSON().id).toBe( aReuseCtrl._v_Id);
     });
 
     it("Has fIdentifyingWithTitleJSON() id _v_Title", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleJSON().title).toBe( aCommonCtrl._v_Title);
+        expect( aReuseCtrl.fIdentifyingWithTitleJSON().title).toBe( aReuseCtrl._v_Title);
     });
 
 
@@ -234,47 +234,47 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
     it("Has fIdentifyingWithTitleString defined", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleString).not.toBeUndefined();
+        expect( aReuseCtrl.fIdentifyingWithTitleString).not.toBeUndefined();
     });
 
     it("Has fIdentifyingWithTitleString typeof function", function () {
-        expect( typeof aCommonCtrl.fIdentifyingWithTitleString).toBe( "function");
+        expect( typeof aReuseCtrl.fIdentifyingWithTitleString).toBe( "function");
     });
 
     it("Has fIdentifyingWithTitleString() not null", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleString()).not.toBeNull();
+        expect( aReuseCtrl.fIdentifyingWithTitleString()).not.toBeNull();
     });
 
     it("Has fIdentifyingWithTitleString() JSON.stringify( fIdentifyingJSON())", function () {
-        expect( aCommonCtrl.fIdentifyingWithTitleString()).toBe( JSON.stringify( aCommonCtrl.fIdentifyingWithTitleJSON()));
+        expect( aReuseCtrl.fIdentifyingWithTitleString()).toBe( JSON.stringify( aReuseCtrl.fIdentifyingWithTitleJSON()));
     });
 
 
 
 
     it("Has fToResultJSON defined", function () {
-        expect( aCommonCtrl.fToResultJSON).not.toBeUndefined();
+        expect( aReuseCtrl.fToResultJSON).not.toBeUndefined();
     });
 
     it("Has fToResultJSON typeof function", function () {
-        expect( typeof aCommonCtrl.fToResultJSON).toBe( "function");
+        expect( typeof aReuseCtrl.fToResultJSON).toBe( "function");
     });
 
     it("Has fToResultJSON() not null", function () {
-        expect( aCommonCtrl.fToResultJSON()).not.toBeNull();
+        expect( aReuseCtrl.fToResultJSON()).not.toBeNull();
     });
 
 
     it("Has fToResultJSON() type _v_Type", function () {
-        expect( aCommonCtrl.fToResultJSON().type).toBe( aCommonCtrl._v_Type);
+        expect( aReuseCtrl.fToResultJSON().type).toBe( aReuseCtrl._v_Type);
     });
 
     it("Has fToResultJSON() id _v_Id", function () {
-        expect( aCommonCtrl.fToResultJSON().id).toBe( aCommonCtrl._v_Id);
+        expect( aReuseCtrl.fToResultJSON().id).toBe( aReuseCtrl._v_Id);
     });
 
     it("Has fToResultJSON() id _v_Title", function () {
-        expect( aCommonCtrl.fToResultJSON().title).toBe( aCommonCtrl._v_Title);
+        expect( aReuseCtrl.fToResultJSON().title).toBe( aReuseCtrl._v_Title);
     });
 
 
@@ -282,7 +282,7 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
 
 
 
-    var someCommonCtrlMethodNames = [
+    var someReuseCtrlMethodNames = [
         "fNewDeferred",
         "fNewDeferredResolvePromise",
         "pDeferredResolve",
@@ -314,21 +314,21 @@ describe("prettytypes-ng CommonCtrlType tests", function () {
     ];
 
 
-    var aNumCommonCtrlMethodNames = someCommonCtrlMethodNames.length;
-    for( var aCommonCtrlMethodNameIdx=0; aCommonCtrlMethodNameIdx < aNumCommonCtrlMethodNames; aCommonCtrlMethodNameIdx++) {
-        var aCommonCtrlMethodName = someCommonCtrlMethodNames[ aCommonCtrlMethodNameIdx];
-        if( aCommonCtrlMethodName) {
+    var aNumReuseCtrlMethodNames = someReuseCtrlMethodNames.length;
+    for( var aReuseCtrlMethodNameIdx=0; aReuseCtrlMethodNameIdx < aNumReuseCtrlMethodNames; aReuseCtrlMethodNameIdx++) {
+        var aReuseCtrlMethodName = someReuseCtrlMethodNames[ aReuseCtrlMethodNameIdx];
+        if( aReuseCtrlMethodName) {
 
             (function() {
 
-                var aCommonCtrlMethodName_here = aCommonCtrlMethodName;
+                var aReuseCtrlMethodName_here = aReuseCtrlMethodName;
 
-                it("Has " + aCommonCtrlMethodName_here + " defined", function () {
-                    expect( aCommonCtrl[ aCommonCtrlMethodName_here]).not.toBeUndefined();
+                it("Has " + aReuseCtrlMethodName_here + " defined", function () {
+                    expect( aReuseCtrl[ aReuseCtrlMethodName_here]).not.toBeUndefined();
                 });
 
-                it("Has " + aCommonCtrlMethodName_here + " typeof function", function () {
-                    expect( typeof aCommonCtrl[ aCommonCtrlMethodName_here]).toBe( "function");
+                it("Has " + aReuseCtrlMethodName_here + " typeof function", function () {
+                    expect( typeof aReuseCtrl[ aReuseCtrlMethodName_here]).toBe( "function");
                 })
             })();
         }

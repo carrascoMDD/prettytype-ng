@@ -1,15 +1,15 @@
 'use strict';
 
 /*
- * widgetctrls_types.js
+ * reuse_ctrl_types.js
  *
- * Creado @author Antonio Carrasco Valero 201410012052
+ * Created @author Antonio Carrasco Valero 201601270044
  *
  *
  ***************************************************************************
 
- Copyright 2014 2015 2016 Antonio Carrasco Valero
- uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused. licensed under EUPL  http://www.uiwire.org
 
 Licensed under the EUPL, Version 1.1 only (the "Licence");
 You may not use this work except in compliance with the
@@ -35,10 +35,10 @@ permissions and limitations under the Licence.
 
 
 
-angular.module("widgetCtrlsTypes", [
-    "commonTypes",
-    "cssKeys",
-    "cssNames"
+angular.module("reuseCtrlTypes", [
+    "typesRegistry",
+    "rootsTypes",
+    "commonTypes"
 ]);
 
 

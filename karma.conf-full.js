@@ -33,6 +33,8 @@ module.exports = function(config){
             'bower_components/prettytype/test/common-test/prominstrexception-test.js',
 
 
+
+
             'src/utils/exceptiondetails_svce.js',
             'src/utils/decoratesystemprototypes_svce.js',
 
@@ -53,6 +55,13 @@ module.exports = function(config){
             'src/identifying/recorder_svce.js',
 
 
+            'src/baseurls/baseurl_types.js',
+            'src/baseurls/appbaseurl_type.js',
+            'src/baseurls/appbaseurl_svce.js',
+            'src/baseurls/apibaseurl_type.js',
+            'src/baseurls/apibaseurl_svce.js',
+
+
             'src/common/common_types.js',
             'src/common/prominstrexception.js',
             'src/common/common_type.js',
@@ -63,6 +72,7 @@ module.exports = function(config){
             'src/common/common_svce.js',
             'src/common/common_ctrl_type.js',
             'src/common/common_ctrl.js',
+
 
 
 
@@ -80,15 +90,34 @@ module.exports = function(config){
             'test/common-test/common_type-test.js',
             'test/common-test/common_type-record-test.js',
             'test/common-test/common_type-misc-test.js',
-
             'test/common-test/prominstr_type-test.js',
             'test/common-test/prominstr_svce-test.js',
             'test/common-test/withprominstr_type-test.js',
 
-
             'test/common-test/common_ctrl_type-test.js',
+            /* ACV OJO 201601270211 TODO  DOES NOT WORK
+             'test/common-test/common_ctrl-test.js',
+             */
+
             'test/common-test/common_svce_type-test.js',
-            'test/common-test/prominstrexception-test.js'
+            'test/common-test/common_svce-test.js',
+
+
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl_types.js',
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl_type.js',
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl.js',
+
+
+            'test/reuse_commons/reuse_svce/reuse_svce_types.js',
+            'test/reuse_commons/reuse_svce/reuse_svce_type.js',
+            'test/reuse_commons/reuse_svce/reuse_svce.js',
+
+            'test/reuse_commons-test/reuse_ctrl_type-test.js',
+            /*
+             'test/reuse_commons-test/reuse_ctrl-test.js',
+             */
+            'test/reuse_commons-test/reuse_svce_type-test.js',
+            'test/reuse_commons-test/reuse_svce-test.js'
         ],
 
         autoWatch : true,

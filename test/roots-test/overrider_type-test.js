@@ -48,7 +48,7 @@ describe("prettytypes-ng OverriderType tests", function () {
 
     var anOverrider           = null;
 
-    var aOverrider_title = "Overrider-Title-test";
+    var aOverrider_title = "OverriderType-Title-test";
 
 
     beforeEach( inject(function( _OverriderType_){

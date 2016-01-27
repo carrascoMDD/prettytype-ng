@@ -52,7 +52,7 @@ describe("prettytypes-ng WithProminstrType tests", function () {
 
     var aWithProminstr         = null;
 
-    var aWithProminstr_title = "Prominstr-Title-test";
+    var aWithProminstr_title = "WithProminstrType-Title-test";
 
 
     beforeEach( inject(function( _IdentifierSvce_, _RecorderSvce_, _WithProminstrType_) {

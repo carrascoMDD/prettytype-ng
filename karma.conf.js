@@ -76,6 +76,8 @@ module.exports = function(config){
 
 
 
+
+
             'test/typesregistry-test.js',
 
             'test/roots-test/overrider_type-test.js',
@@ -94,8 +96,32 @@ module.exports = function(config){
             'test/common-test/withprominstr_type-test.js',
 
             'test/common-test/common_ctrl_type-test.js',
+            /* ACV OJO 201601270211 TODO  DOES NOT WORK
+             'test/common-test/common_ctrl-test.js',
+             */
 
             'test/common-test/common_svce_type-test.js',
+            'test/common-test/common_svce-test.js',
+
+
+
+
+
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl_types.js',
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl_type.js',
+            'test/reuse_commons/reuse_ctrl/reuse_ctrl.js',
+
+
+            'test/reuse_commons/reuse_svce/reuse_svce_types.js',
+            'test/reuse_commons/reuse_svce/reuse_svce_type.js',
+            'test/reuse_commons/reuse_svce/reuse_svce.js',
+
+            'test/reuse_commons-test/reuse_ctrl_type-test.js',
+            /*
+            'test/reuse_commons-test/reuse_ctrl-test.js',
+             */
+            'test/reuse_commons-test/reuse_svce_type-test.js',
+            'test/reuse_commons-test/reuse_svce-test.js'
 
         ],
 

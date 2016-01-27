@@ -1,7 +1,7 @@
 /*
- * reuse_svce_type-test.js
+ * common_svce-test.js
  *
- * Created @author Antonio Carrasco Valero 201601250225
+ * Created @author Antonio Carrasco Valero 201601270122
  *
  *
  ***************************************************************************
@@ -36,36 +36,32 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/common_svce_type.js"/>
+/// <reference path="src/common/common_svce.js"/>
 "use strict";
 
 
 
 
-describe("prettytypes-ng CommonSvceType tests", function () {
+describe("prettytypes-ng CommonSvce tests", function () {
 
 
 
 
-    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs","reuseSvceTypes"));
+    beforeEach( module( "typesRegistry", "rootsTypes", "identifyingTypes", "commonTypes", "baseURLs"));
 
 
     var aCommonSvce    = null;
 
-    var aCommonSvce_title = "CommonSvceType-Title-test";
+    var aCommonSvce_title = "CommonSvce-Title-test";
 
 
 
-    beforeEach( inject(function(  _IdentifierSvce_, _RecorderSvce_, _CommonSvceType_) {
+    beforeEach( inject(function( _CommonSvce_) {
 
         // console.log( "typeof _CommonSvceType_= " + typeof _CommonSvceType_);
         // console.log( "anIdentifier _CommonSvceType_ = " + Object.keys( _CommonSvceType_));
 
-        aCommonSvce = new _CommonSvceType_.CommonSvce_Constructor(
-            aCommonSvce_title,
-            _IdentifierSvce_,
-            _RecorderSvce_
-        );
+        aCommonSvce = _CommonSvce_;
         // console.log( "typeof aCommon= " + typeof aCommon);
         // console.log( "aCommon keys = " + Object.keys( aCommon));
 
@@ -142,7 +138,7 @@ describe("prettytypes-ng CommonSvceType tests", function () {
     });
 
     it("Has title CommonSvce_DefaultName", function () {
-        expect( aCommonSvce._v_Title).toBe( aCommonSvce_title);
+        expect( aCommonSvce._v_Title).toBe( "Common_Service");
     });
 
 

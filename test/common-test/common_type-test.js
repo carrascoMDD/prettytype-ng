@@ -50,7 +50,7 @@ describe("prettytypes-ng CommonType tests", function () {
 
     var aCommon             = null;
 
-    var aCommon_title = "Common-Title-test";
+    var aCommon_title = "CommonType-Title-test";
 
 
 
