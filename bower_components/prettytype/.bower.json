@@ -19,11 +19,11 @@
     "node_modules",
     "bower_components"
   ],
-  "_release": "8c773346da",
+  "_release": "8de53b891c",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "8c773346da88a856f7031c127fb26ee66ce17e38"
+    "commit": "8de53b891cf8cfb0d97a70edbe4dfdadd6c05912"
   },
   "_source": "git://github.com/carrascoMDD/prettytype.git",
   "_target": "*",
