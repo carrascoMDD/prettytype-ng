@@ -14,7 +14,7 @@ module.exports = function(config){
 
             'bower_components/prettytype/src/**/*.js',
 
-            /* commented out during dev
+
             'bower_components/prettytype/test/typesregistry-test.js',
             'bower_components/prettytype/test/roots-test/overrider_type-test.js',
             'bower_components/prettytype/test/identifying-test/identifier_type-test.js',
@@ -32,7 +32,6 @@ module.exports = function(config){
             'bower_components/prettytype/test/common-test/common_ctrl_type-test.js',
             'bower_components/prettytype/test/common-test/common_svce_type-test.js',
             'bower_components/prettytype/test/common-test/prominstrexception-test.js',
-             */
 
 
             'src/utils/exceptiondetails_svce.js',
@@ -117,7 +116,7 @@ module.exports = function(config){
             'test/reuse_commons/reuse_svce/reuse_svce.js',
 
             'test/reuse_commons-test/reuse_ctrl_type-test.js',
-            /*
+            /* ACV OJO 201601270211 TODO  DOES NOT WORK
             'test/reuse_commons-test/reuse_ctrl-test.js',
              */
             'test/reuse_commons-test/reuse_svce_type-test.js',
