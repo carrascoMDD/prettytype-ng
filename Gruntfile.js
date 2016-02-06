@@ -58,13 +58,6 @@ module.exports = function(grunt) {
                     spawn:false,
                     event:['all']
                 },
-            },
-            karma: {
-                files: [
-                    'src/**/*.js',
-                    'test/**/*.js'
-                ],
-                tasks: ['karma:unit:run'] //NOTE the :run flag
             }
         },
         concat : {
@@ -73,7 +66,40 @@ module.exports = function(grunt) {
                 sourceMap :true
             },
             dist : {
-                src  : [ '<%= watch.scripts.files %>' ],
+                src  : [ 
+                    /* Order of files explicitely stated and mandatory for the sucessful resolution of dependencies injection in angular module definitions */
+
+                    'src/utils/exceptiondetails_svce.js',
+                    'src/utils/decoratesystemprototypes_svce.js',
+
+                    'src/typesregistry_svce.js',
+
+
+                    'src/roots/roots_types.js',
+                    'src/roots/overrider_type.js',
+                    'src/roots/overrider_svce.js',
+
+
+                    'src/identifying/identifying_types.js',
+                    'src/identifying/identifier_type.js',
+                    'src/identifying/identifier_svce.js',
+
+                    'src/identifying/record_type.js',
+                    'src/identifying/recorder_type.js',
+                    'src/identifying/recorder_svce.js',
+
+
+                    'src/common/common_types.js',
+                    'src/common/prominstrexception.js',
+                    'src/common/common_type.js',
+                    'src/common/prominstr_type.js',
+                    'src/common/prominstr_svce.js',
+                    'src/common/withprominstr_type.js',
+                    'src/common/common_svce_type.js',
+                    'src/common/common_svce.js',
+                    'src/common/common_ctrl_type.js',
+                    'src/common/common_ctrl.js' 
+                ],
                 dest : 'build/prettytype-ng.js'
             }
         },
@@ -91,9 +117,6 @@ module.exports = function(grunt) {
 
         karma: {
             unit: {
-                configFile: 'karma.conf.js'
-            },
-            continuous: {
                 configFile: 'karma.conf.js',
                 singleRun: true
             }

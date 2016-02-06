@@ -11,9 +11,7 @@ module.exports = function(config){
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
 
-
-            'bower_components/prettytype/src/**/*.js',
-
+            'bower_components/prettytype/dist/prettytype.min.js',
 
             'bower_components/prettytype/test/typesregistry-test.js',
             'bower_components/prettytype/test/roots-test/overrider_type-test.js',
