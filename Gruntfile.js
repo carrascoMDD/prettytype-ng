@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        watch: {
+        kkwatch: {
             scripts: {
 
                 files: [
@@ -131,6 +131,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['concat', 'uglify']);
 
 };
