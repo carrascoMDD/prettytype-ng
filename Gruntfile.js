@@ -23,6 +23,11 @@ module.exports = function(grunt) {
 
                     'src/typesregistry_svce.js',
 
+                    'src/baseurls/baseurl_types.js',
+                    'src/baseurls/appbaseurl_type.js',
+                    'src/baseurls/appbaseurl_svce.js',
+                    'src/baseurls/apibaseurl_type.js',
+                    'src/baseurls/apibaseurl_svce.js',
 
                     'src/roots/roots_types.js',
                     'src/roots/overrider_type.js',
@@ -60,6 +65,11 @@ module.exports = function(grunt) {
                 },
             }
         },
+
+
+        clean: [ "build/**/*", "dist/**/*"],
+
+
         concat : {
             options : {
                 separator: ';',
@@ -74,6 +84,11 @@ module.exports = function(grunt) {
 
                     'src/typesregistry_svce.js',
 
+                    'src/baseurls/baseurl_types.js',
+                    'src/baseurls/appbaseurl_type.js',
+                    'src/baseurls/appbaseurl_svce.js',
+                    'src/baseurls/apibaseurl_type.js',
+                    'src/baseurls/apibaseurl_svce.js',
 
                     'src/roots/roots_types.js',
                     'src/roots/overrider_type.js',
@@ -124,6 +139,7 @@ module.exports = function(grunt) {
     });
 
     // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
