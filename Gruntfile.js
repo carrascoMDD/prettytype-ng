@@ -122,7 +122,8 @@ module.exports = function(grunt) {
             options: {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - */\n',
                 sourceMap : true,
-                sourceMapIncludeSources : true
+                sourceMapIncludeSources : true,
+                sourceMapIn: 'build/prettytype-ng.js.map'
             },
             build: {
                 src: '<%= concat.dist.dest %>',
