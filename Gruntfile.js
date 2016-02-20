@@ -30,28 +30,28 @@ module.exports = function(grunt) {
                     'src/baseurls/apibaseurl_svce.js',
 
                     'src/roots/roots_types.js',
-                    'src/roots/overrider_type.js',
+                    'src/roots/overrider_ng_type.js',
                     'src/roots/overrider_svce.js',
 
 
                     'src/identifying/identifying_types.js',
-                    'src/identifying/identifier_type.js',
+                    'src/identifying/identifier_ng_type.js',
                     'src/identifying/identifier_svce.js',
 
-                    'src/identifying/record_type.js',
-                    'src/identifying/recorder_type.js',
+                    'src/identifying/record_ng_type.js',
+                    'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',
 
 
                     'src/common/common_types.js',
-                    'src/common/prominstrexception.js',
-                    'src/common/common_type.js',
-                    'src/common/prominstr_type.js',
+                    'src/common/prominstrexception_ng.js',
+                    'src/common/common_ng_type.js',
+                    'src/common/prominstr_ng_type.js',
                     'src/common/prominstr_svce.js',
-                    'src/common/withprominstr_type.js',
-                    'src/common/common_svce_type.js',
+                    'src/common/withprominstr_ng_type.js',
+                    'src/common/common_svce_ng_type.js',
                     'src/common/common_svce.js',
-                    'src/common/common_ctrl_type.js',
+                    'src/common/common_ctrl_ng_type.js',
                     'src/common/common_ctrl.js'
 
                 ],
@@ -91,28 +91,28 @@ module.exports = function(grunt) {
                     'src/baseurls/apibaseurl_svce.js',
 
                     'src/roots/roots_types.js',
-                    'src/roots/overrider_type.js',
+                    'src/roots/overrider_ng_type.js',
                     'src/roots/overrider_svce.js',
 
 
                     'src/identifying/identifying_types.js',
-                    'src/identifying/identifier_type.js',
+                    'src/identifying/identifier_ng_type.js',
                     'src/identifying/identifier_svce.js',
 
-                    'src/identifying/record_type.js',
-                    'src/identifying/recorder_type.js',
+                    'src/identifying/record_ng_type.js',
+                    'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',
 
 
                     'src/common/common_types.js',
-                    'src/common/prominstrexception.js',
-                    'src/common/common_type.js',
-                    'src/common/prominstr_type.js',
+                    'src/common/prominstrexception_ng.js',
+                    'src/common/common_ng_type.js',
+                    'src/common/prominstr_ng_type.js',
                     'src/common/prominstr_svce.js',
-                    'src/common/withprominstr_type.js',
-                    'src/common/common_svce_type.js',
+                    'src/common/withprominstr_ng_type.js',
+                    'src/common/common_svce_ng_type.js',
                     'src/common/common_svce.js',
-                    'src/common/common_ctrl_type.js',
+                    'src/common/common_ctrl_ng_type.js',
                     'src/common/common_ctrl.js' 
                 ],
                 dest : 'build/prettytype-ng.js'
