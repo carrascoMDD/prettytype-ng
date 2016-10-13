@@ -11,44 +11,70 @@ module.exports = function(config){
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
 
+            /*
             'bower_components/prettytype/dist/prettytype.min.js',
 
-            'bower_components/prettytype/test/typesregistry-test.js',
-            'bower_components/prettytype/test/roots-test/overrider_type-test.js',
-            'bower_components/prettytype/test/identifying-test/identifier_type-test.js',
-            'bower_components/prettytype/test/identifying-test/record_type-test.js',
-            'bower_components/prettytype/test/identifying-test/recorder_type-test.js',
-            'bower_components/prettytype/test/common-test/common_type-test.js',
-            'bower_components/prettytype/test/common-test/common_type-record-test.js',
-            'bower_components/prettytype/test/common-test/common_type-misc-test.js',
-            'bower_components/prettytype/test/common-test/qngmock.js',
-            'bower_components/prettytype/test/common-test/prominstr_type-test.js',
-            'bower_components/prettytype/test/common-test/withprominstr_type-test.js',
-            'bower_components/prettytype/test/common-test/appbaseurlmock.js',
-            'bower_components/prettytype/test/common-test/apibaseurlmock.js',
-            'bower_components/prettytype/test/common-test/locationngmock.js',
-            'bower_components/prettytype/test/common-test/common_ctrl_type-test.js',
-            'bower_components/prettytype/test/common-test/common_svce_type-test.js',
-            'bower_components/prettytype/test/common-test/prominstrexception-test.js',
+             */
 
 
-            'src/utils/exceptiondetails_svce.js',
-            'src/utils/decoratesystemprototypes_svce.js',
+             'bower_components/prettytype/src/roots/logmoduleloads.js',
+
+             'bower_components/prettytype/src/typesregistry.js',
+
+             'bower_components/prettytype/src/utils/decoratesystemprototypes_svce.js',
+             'bower_components/prettytype/src/utils/stacktrace.js',
+             'bower_components/prettytype/src/utils/exceptiondetails_svce.js',
+             'bower_components/prettytype/src/utils/console_svce.js',
+
+             'bower_components/prettytype/src/roots/overrider_type.js',
+
+             'bower_components/prettytype/src/commoneventkinds.js',
+             'bower_components/prettytype/src/common/common_type.js',
+             'bower_components/prettytype/src/common/prominstrexception.js',
+             'bower_components/prettytype/src/common/prominstr_type.js',
+             'bower_components/prettytype/src/common/withprominstr_type.js',
+             'bower_components/prettytype/src/common/common_ctrl_type.js',
+             'bower_components/prettytype/src/common/common_svce_type.js',
+
+             'bower_components/prettytype/src/identifying/identifier_type.js',
+             'bower_components/prettytype/src/identifying/record_type.js',
+             'bower_components/prettytype/src/identifying/recordingpolicy_type.js',
+             'bower_components/prettytype/src/identifying/recordingpolicy_keepall_type.js',
+             'bower_components/prettytype/src/identifying/dumpingpolicy_type.js',
+             'bower_components/prettytype/src/identifying/dumpingpolicy_filterkinds_type.js',
+             'bower_components/prettytype/src/identifying/record_type.js',
+             'bower_components/prettytype/src/identifying/recorder_type.js',
+
+
+
+
+
+            'src/utils/exceptiondetails_ng_svce.js',
+            'src/utils/decoratesystemprototypes_ng_svce.js',
 
             'src/typesregistry_svce.js',
 
 
             'src/roots/roots_types.js',
-            'src/roots/overrider_type.js',
+            'src/roots/overrider_ng_type.js',
             'src/roots/overrider_svce.js',
 
 
+            'src/utils/console_ng_svce.js',
+
+
             'src/identifying/identifying_types.js',
-            'src/identifying/identifier_type.js',
+            'src/identifying/identifier_ng_type.js',
             'src/identifying/identifier_svce.js',
 
-            'src/identifying/record_type.js',
-            'src/identifying/recorder_type.js',
+            'src/identifying/record_ng_type.js',
+
+            'src/identifying/recordingpolicy_ng_type.js',
+            'src/identifying/recordingpolicy_keepall_ng_type.js',
+            'src/identifying/dumpingpolicy_ng_type.js',
+            'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
+
+            'src/identifying/recorder_ng_type.js',
             'src/identifying/recorder_svce.js',
 
 
@@ -60,14 +86,15 @@ module.exports = function(config){
 
 
             'src/common/common_types.js',
+            'src/commoneventkinds_ng.js',
             'src/common/prominstrexception.js',
-            'src/common/common_type.js',
-            'src/common/prominstr_type.js',
+            'src/common/common_ng_type.js',
+            'src/common/prominstr_ng_type.js',
             'src/common/prominstr_svce.js',
-            'src/common/withprominstr_type.js',
-            'src/common/common_svce_type.js',
+            'src/common/withprominstr_ng_type.js',
+            'src/common/common_svce_ng_type.js',
             'src/common/common_svce.js',
-            'src/common/common_ctrl_type.js',
+            'src/common/common_ctrl_ng_type.js',
             'src/common/common_ctrl.js',
 
 
@@ -77,28 +104,37 @@ module.exports = function(config){
 
             'test/typesregistry-test.js',
 
-            'test/roots-test/overrider_type-test.js',
-            'test/roots-test/overrider_svce-test.js',
 
-            'test/identifying-test/identifier_type-test.js',
-            'test/identifying-test/record_type-test.js',
-            'test/identifying-test/recorder_type-test.js',
-            'test/identifying-test/recorder_svce-test.js',
+            'test/structural-test/utils-structural-test/console_svce-test.js',
 
-            'test/common-test/common_type-test.js',
-            'test/common-test/common_type-record-test.js',
-            'test/common-test/common_type-misc-test.js',
-            'test/common-test/prominstr_type-test.js',
-            'test/common-test/prominstr_svce-test.js',
-            'test/common-test/withprominstr_type-test.js',
+            'test/structural-test/roots-structural-test/overrider_type-structural-test.js',
+            'test/structural-test/roots-structural-test/overrider_svce-structural-test.js',
 
-            'test/common-test/common_ctrl_type-test.js',
+            'test/structural-test/identifying-structural-test/identifier_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/identifier_svce-structural-test.js',
+
+            'test/structural-test/identifying-structural-test/record_type-structural-test.js',
+
+            'test/structural-test/identifying-structural-test/recordingpolicy_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/recordingpolicy_keepall_type-structural-test.js',
+
+            'test/structural-test/identifying-structural-test/dumpingpolicy_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/dumpingpolicy_filterkinds_type-structural-test.js',
+
+            'test/structural-test/identifying-structural-test/recorder_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/recorder_svce-structural-test.js',
+
+            'test/structural-test/common-structural-test/prominstr_type-structural-test.js',
+            'test/structural-test/common-structural-test/prominstr_svce-structural-test.js',
+            'test/structural-test/common-structural-test/withprominstr_type-structural-test.js',
+
+            'test/structural-test/common-structural-test/common_ctrl_type-structural-test.js',
             /* ACV OJO 201601270211 TODO  DOES NOT WORK
-             'test/common-test/common_ctrl-test.js',
+             'test/structural-test/common-test/common_ctrl-structural-test.js'
              */
 
-            'test/common-test/common_svce_type-test.js',
-            'test/common-test/common_svce-test.js',
+            'test/structural-test/common-structural-test/common_svce_type-structural-test.js',
+            'test/structural-test/common-structural-test/common_svce-structural-test.js',
 
 
 
@@ -113,12 +149,29 @@ module.exports = function(config){
             'test/reuse_commons/reuse_svce/reuse_svce_type.js',
             'test/reuse_commons/reuse_svce/reuse_svce.js',
 
-            'test/reuse_commons-test/reuse_ctrl_type-test.js',
+
+
+
+            'test/structural-test/reuse_commons-structural-test/reuse_ctrl_type-structural-test.js',
             /* ACV OJO 201601270211 TODO  DOES NOT WORK
-            'test/reuse_commons-test/reuse_ctrl-test.js',
+            'test/structural-test/reuse_commons-test/reuse_ctrl-structural-test.js'
              */
-            'test/reuse_commons-test/reuse_svce_type-test.js',
-            'test/reuse_commons-test/reuse_svce-test.js'
+
+
+            'test/structural-test/reuse_commons-structural-test/reuse_svce_type-structural-test.js',
+            'test/structural-test/reuse_commons-structural-test/reuse_svce-structural-test.js',
+
+
+
+            'test/behavioral-test/utils-behavioral-test/console_svce-behavioral-test.js',
+
+            'test/behavioral-test/common-behavioral-test/common_svce-record-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keepall-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keepall_donotkeep-behavioral-test.js',
+
+            'test/behavioral-test/common-behavioral-test/common_svce-dumpingpolicy_filterkinds_all-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-dumpingpolicy_filterkinds_maynotdump-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-dumpingpolicy_filterkinds_some-behavioral-test.js'
 
         ],
 

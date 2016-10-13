@@ -44,6 +44,7 @@ module.exports = function(grunt) {
 
 
                     'src/common/common_types.js',
+                    'src/commoneventkinds_ng.js',
                     'src/common/prominstrexception_ng.js',
                     'src/common/common_ng_type.js',
                     'src/common/prominstr_ng_type.js',
@@ -94,17 +95,25 @@ module.exports = function(grunt) {
                     'src/roots/overrider_ng_type.js',
                     'src/roots/overrider_svce.js',
 
+                    'src/utils/console_ng_svce.js',
 
                     'src/identifying/identifying_types.js',
                     'src/identifying/identifier_ng_type.js',
                     'src/identifying/identifier_svce.js',
 
                     'src/identifying/record_ng_type.js',
+
+                    'src/identifying/recordingpolicy_ng_type.js',
+                    'src/identifying/recordingpolicy_keepall_ng_type.js',
+                    'src/identifying/dumpingpolicy_ng_type.js',
+                    'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
+
                     'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',
 
 
                     'src/common/common_types.js',
+                    'src/commoneventkinds_ng.js',
                     'src/common/prominstrexception_ng.js',
                     'src/common/common_ng_type.js',
                     'src/common/prominstr_ng_type.js',

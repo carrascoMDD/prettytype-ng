@@ -691,6 +691,61 @@ function( theSS_OverriderType){
 ;'use strict';
 
 /*
+ * console_ng_svce.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131345
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+
+var mExceptionDetailsServices = angular.module("consoleSvce", [
+    "typesRegistry",
+    "rootsTypes"
+]);
+
+
+
+
+mExceptionDetailsServices.factory("ConsoleSvce",[
+     "TypesRegistrySvce",
+     "OverriderSvce",
+      ModuleFactory_ConsoleSvce()
+  ]
+);
+
+
+
+
+;'use strict';
+
+/*
  * identifying_types.js
  *
  * Created @author Antonio Carrasco Valero 201409301544
@@ -726,7 +781,9 @@ permissions and limitations under the Licence.
 
 angular.module("identifyingTypes", [
     "typesRegistry",
-    "rootsTypes"
+    "rootsTypes",
+    "consoleSvce",
+    "commonEventKinds"
 ]);
 
 
@@ -875,6 +932,176 @@ angular.module("identifyingTypes").factory("RecordType", [
 ;'use strict';
 
 /*
+ * recordingpolicy_ng_type.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131411
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+angular.module("identifyingTypes").factory("RecordingPolicyType", [
+    "TypesRegistrySvce",
+    "OverriderSvce",
+    "IdentifierSvce",
+    ModuleFactory_RecordingPolicyType()
+]);
+;'use strict';
+
+/*
+ * recordingpolicy_keepall_ng_type.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131412
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+angular.module("identifyingTypes").factory("RecordingPolicyKeepAllType", [
+    "TypesRegistrySvce",
+    "OverriderSvce",
+    "RecordingPolicyType",
+    ModuleFactory_RecordingPolicyKeepAllType()
+]);
+;'use strict';
+
+/*
+ * dumpingpolicy_ng_type.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131411
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+angular.module("identifyingTypes").factory("DumpingPolicyType", [
+    "TypesRegistrySvce",
+    "OverriderSvce",
+    "IdentifierSvce",
+    "ConsoleSvce",
+    ModuleFactory_DumpingPolicyType()
+]);
+;'use strict';
+
+/*
+ * dumpingpolicy_filterkinds_ng_type.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131419
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+angular.module("identifyingTypes").factory("DumpingPolicyFilterKindsType", [
+    "TypesRegistrySvce",
+    "OverriderSvce",
+    "DumpingPolicyType",
+    "CommonEventKinds",
+    ModuleFactory_DumpingPolicyFilterKindsType()
+]);
+;'use strict';
+
+/*
  * recorder_type.js
  *
  * Created @author Antonio Carrasco Valero 201601261700
@@ -914,6 +1141,8 @@ angular.module("identifyingTypes").factory("RecorderType", [
     "IdentifierSvce",
     "IdentifierType",
     "RecordType",
+    "RecordingPolicyKeepAllType",
+    "DumpingPolicyFilterKindsType",
     ModuleFactory_RecorderType()
 ]);
 
@@ -1017,10 +1246,57 @@ permissions and limitations under the Licence.
 angular.module("commonTypes", [
     "typesRegistry",
     "rootsTypes",
+    "commonEventKinds",
     "identifyingTypes",
     "baseURLs"
 ]);
 
+
+
+
+;'use strict';
+
+/*
+ * commoneventkinds_ng.js
+ *
+ * Created @author Antonio Carrasco Valero 201610131421
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2016 Antonio Carrasco Valero
+ Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+var mCommonEventKinds = angular.module("commonEventKinds", [ "typesRegistry"]);
+
+
+
+
+mCommonEventKinds.factory("CommonEventKinds",[
+    "TypesRegistrySvce",
+    ModuleFactory_CommonEventKinds()
+]);
 
 
 

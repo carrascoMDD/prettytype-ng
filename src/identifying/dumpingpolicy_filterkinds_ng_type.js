@@ -1,14 +1,14 @@
 'use strict';
 
 /*
- * common_types.js
+ * dumpingpolicy_filterkinds_ng_type.js
  *
- * Created @author Antonio Carrasco Valero 201409301544
+ * Created @author Antonio Carrasco Valero 201610131419
  *
  *
  ***************************************************************************
 
- Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Copyright 2016 Antonio Carrasco Valero
  Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.  licensed under EUPL  http://www.uiwire.org
 
 Licensed under the EUPL, Version 1.1 only (the "Licence");
@@ -34,14 +34,10 @@ permissions and limitations under the Licence.
 
 
 
-angular.module("commonTypes", [
-    "typesRegistry",
-    "rootsTypes",
-    "commonEventKinds",
-    "identifyingTypes",
-    "baseURLs"
+angular.module("identifyingTypes").factory("DumpingPolicyFilterKindsType", [
+    "TypesRegistrySvce",
+    "OverriderSvce",
+    "DumpingPolicyType",
+    "CommonEventKinds",
+    ModuleFactory_DumpingPolicyFilterKindsType()
 ]);
-
-
-
-

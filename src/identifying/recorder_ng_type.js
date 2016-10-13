@@ -40,6 +40,8 @@ angular.module("identifyingTypes").factory("RecorderType", [
     "IdentifierSvce",
     "IdentifierType",
     "RecordType",
+    "RecordingPolicyKeepAllType",
+    "DumpingPolicyFilterKindsType",
     ModuleFactory_RecorderType()
 ]);
 

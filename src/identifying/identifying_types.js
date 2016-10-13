@@ -36,7 +36,9 @@ permissions and limitations under the Licence.
 
 angular.module("identifyingTypes", [
     "typesRegistry",
-    "rootsTypes"
+    "rootsTypes",
+    "consoleSvce",
+    "commonEventKinds"
 ]);
 
 

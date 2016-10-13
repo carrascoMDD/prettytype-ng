@@ -1,6 +1,6 @@
 {
   "name": "prettytype-ng",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused.",
   "keywords": [
     "core",

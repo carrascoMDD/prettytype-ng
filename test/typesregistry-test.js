@@ -66,11 +66,11 @@ describe("prettytypes-ng TypesRegistry tests", function () {
     });
 
     it("Has module ModulePackages typesregistry", function () {
-        expect( aTypesRegistrySvce._v_Module.ModulePackages).toBe( "common");
+        expect( aTypesRegistrySvce._v_Module.ModulePackages).toBe( "base");
     });
 
     it("Has module ModuleFullName common.typesregistry", function () {
-        expect( aTypesRegistrySvce._v_Module.ModuleFullName).toBe( "common/typesregistry");
+        expect( aTypesRegistrySvce._v_Module.ModuleFullName).toBe( "base/typesregistry");
     });
 
     it("Has module TypesRegistry_Prototype defined", function () {
