@@ -124,14 +124,20 @@ module.exports = function(config){
             'test/structural-test/identifying-structural-test/recorder_type-structural-test.js',
             'test/structural-test/identifying-structural-test/recorder_svce-structural-test.js',
 
+
+            'test/structural-test/common-structural-test/common_type-structural-test.js',
+            'test/structural-test/common-structural-test/common_type-commoneventkinds-structural-test.js',
+
             'test/structural-test/common-structural-test/prominstr_type-structural-test.js',
             'test/structural-test/common-structural-test/prominstr_svce-structural-test.js',
             'test/structural-test/common-structural-test/withprominstr_type-structural-test.js',
+
 
             'test/structural-test/common-structural-test/common_ctrl_type-structural-test.js',
             /* ACV OJO 201601270211 TODO  DOES NOT WORK
              'test/structural-test/common-test/common_ctrl-structural-test.js'
              */
+
 
             'test/structural-test/common-structural-test/common_svce_type-structural-test.js',
             'test/structural-test/common-structural-test/common_svce-structural-test.js',

@@ -36,7 +36,7 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/common_svce_type.js"/>
+/// <reference path="src/common/common_svce_ng_type.js"/>
 "use strict";
 
 

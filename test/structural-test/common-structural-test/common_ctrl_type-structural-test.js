@@ -34,7 +34,7 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/common_ctrl_type.js"/>
+/// <reference path="src/common/common_ctrl_ng_type.js"/>
 "use strict";
 
 

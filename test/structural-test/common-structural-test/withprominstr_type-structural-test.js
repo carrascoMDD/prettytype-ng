@@ -36,7 +36,7 @@ permissions and limitations under the Licence.
 
 
 
-/// <reference path="src/common/withprominstr_type.js"/>
+/// <reference path="src/common/withprominstr_ng_type.js"/>
 "use strict";
 
 

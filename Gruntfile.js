@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        kkwatch: {
+        watch: {
             scripts: {
 
                 files: [
@@ -16,7 +16,6 @@ module.exports = function(grunt) {
                     'bower_components/angular/angular.js',
 
                     'bower_components/prettytype/src/**/*.js',
-
 
                     'src/utils/exceptiondetails_svce.js',
                     'src/utils/decoratesystemprototypes_svce.js',
@@ -33,12 +32,19 @@ module.exports = function(grunt) {
                     'src/roots/overrider_ng_type.js',
                     'src/roots/overrider_svce.js',
 
+                    'src/utils/console_ng_svce.js',
 
                     'src/identifying/identifying_types.js',
                     'src/identifying/identifier_ng_type.js',
                     'src/identifying/identifier_svce.js',
 
                     'src/identifying/record_ng_type.js',
+
+                    'src/identifying/recordingpolicy_ng_type.js',
+                    'src/identifying/recordingpolicy_keepall_ng_type.js',
+                    'src/identifying/dumpingpolicy_ng_type.js',
+                    'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
+
                     'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',
 
@@ -54,7 +60,6 @@ module.exports = function(grunt) {
                     'src/common/common_svce.js',
                     'src/common/common_ctrl_ng_type.js',
                     'src/common/common_ctrl.js'
-
                 ],
 
                 tasks: ['concat', 'uglify'],

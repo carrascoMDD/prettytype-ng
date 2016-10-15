@@ -1393,7 +1393,8 @@ angular.module("commonTypes").factory("CommonType", [
     "TypesRegistrySvce",
     "OverriderSvce",
     "IdentifierSvce",
-    "RecorderType",
+    "RecorderSvce",
+    "CommonEventKinds",
     ModuleFactory_CommonType()
 ]);
 ;'use strict';
