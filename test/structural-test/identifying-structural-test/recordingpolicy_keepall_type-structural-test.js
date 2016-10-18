@@ -286,6 +286,17 @@ describe("prettytypes-ng RecordingPolicyKeepAll structural tests", function () {
 
 
 
+    it("Has pPruneRecords defined", function () {
+        expect( aRecordingPolicyKeepAll.pPruneRecords).not.toBeUndefined();
+    });
+
+    it("Has pPruneRecords typeof function", function () {
+        expect( typeof aRecordingPolicyKeepAll.pPruneRecords).toBe( "function");
+    });
+
+
+
+
     it("Has pRelease defined", function () {
         expect( aRecordingPolicyKeepAll.pRelease).not.toBeUndefined();
     });

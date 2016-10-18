@@ -40,6 +40,8 @@ module.exports = function(config){
              'bower_components/prettytype/src/identifying/record_type.js',
              'bower_components/prettytype/src/identifying/recordingpolicy_type.js',
              'bower_components/prettytype/src/identifying/recordingpolicy_keepall_type.js',
+             'bower_components/prettytype/src/identifying/recordingpolicy_keepsome_type.js',
+             'bower_components/prettytype/src/identifying/recordingpolicy_keeprecent_type.js',
              'bower_components/prettytype/src/identifying/dumpingpolicy_type.js',
              'bower_components/prettytype/src/identifying/dumpingpolicy_filterkinds_type.js',
              'bower_components/prettytype/src/identifying/record_type.js',
@@ -71,6 +73,8 @@ module.exports = function(config){
 
             'src/identifying/recordingpolicy_ng_type.js',
             'src/identifying/recordingpolicy_keepall_ng_type.js',
+            'src/identifying/recordingpolicy_keepsome_ng_type.js',
+            'src/identifying/recordingpolicy_keeprecent_ng_type.js',
             'src/identifying/dumpingpolicy_ng_type.js',
             'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
 
@@ -117,6 +121,8 @@ module.exports = function(config){
 
             'test/structural-test/identifying-structural-test/recordingpolicy_type-structural-test.js',
             'test/structural-test/identifying-structural-test/recordingpolicy_keepall_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/recordingpolicy_keepsome_type-structural-test.js',
+            'test/structural-test/identifying-structural-test/recordingpolicy_keeprecent_type-structural-test.js',
 
             'test/structural-test/identifying-structural-test/dumpingpolicy_type-structural-test.js',
             'test/structural-test/identifying-structural-test/dumpingpolicy_filterkinds_type-structural-test.js',
@@ -174,6 +180,9 @@ module.exports = function(config){
             'test/behavioral-test/common-behavioral-test/common_svce-record-behavioral-test.js',
             'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keepall-behavioral-test.js',
             'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keepall_donotkeep-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keepsome-behavioral-test.js',
+            'test/behavioral-test/common-behavioral-test/common_svce-recordingpolicy_keeprecent-behavioral-test.js',
+
 
             'test/behavioral-test/common-behavioral-test/common_svce-dumpingpolicy_filterkinds_all-behavioral-test.js',
             'test/behavioral-test/common-behavioral-test/common_svce-dumpingpolicy_filterkinds_maynotdump-behavioral-test.js',
