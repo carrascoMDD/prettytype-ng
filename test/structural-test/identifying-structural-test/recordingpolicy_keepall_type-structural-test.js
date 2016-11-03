@@ -276,15 +276,6 @@ describe("prettytypes-ng RecordingPolicyKeepAll structural tests", function () {
 
 
 
-    it("Has pRecordRecord defined", function () {
-        expect( aRecordingPolicyKeepAll.pRecordRecord).not.toBeUndefined();
-    });
-
-    it("Has pRecordRecord typeof function", function () {
-        expect( typeof aRecordingPolicyKeepAll.pRecordRecord).toBe( "function");
-    });
-
-
 
     it("Has pPruneRecords defined", function () {
         expect( aRecordingPolicyKeepAll.pPruneRecords).not.toBeUndefined();

@@ -341,6 +341,53 @@ describe("prettytypes-ng RecorderSvce structural tests", function () {
 
 
 
+    it("Has pDiscardRecordsToMaxNumber defined", function () {
+        expect( aRecorder.pDiscardRecordsToMaxNumber).not.toBeUndefined();
+    });
+
+    it("Has pDiscardRecordsToMaxNumber typeof function", function () {
+        expect( typeof aRecorder.pDiscardRecordsToMaxNumber).toBe( "function");
+    });
+
+
+
+    it("Has pDiscardRecordsOlderThan defined", function () {
+        expect( aRecorder.pDiscardRecordsOlderThan).not.toBeUndefined();
+    });
+
+    it("Has pDiscardRecordsOlderThan typeof function", function () {
+        expect( typeof aRecorder.pDiscardRecordsOlderThan).toBe( "function");
+    });
+
+
+
+
+
+
+
+    it("Has pSetRecordPointer defined", function () {
+        expect( aRecorder.pSetRecordPointer).not.toBeUndefined();
+    });
+
+    it("Has pSetRecordPointer typeof function", function () {
+        expect( typeof aRecorder.pSetRecordPointer).toBe( "function");
+    });
+
+
+
+
+    it("Has pClearRecordPointer defined", function () {
+        expect( aRecorder.pClearRecordPointer).not.toBeUndefined();
+    });
+
+    it("Has pClearRecordPointer typeof function", function () {
+        expect( typeof aRecorder.pClearRecordPointer).toBe( "function");
+    });
+
+
+
+
+
 
 
 });

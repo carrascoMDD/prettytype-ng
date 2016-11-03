@@ -287,15 +287,6 @@ describe("prettytypes-ng RecordingPolicy structural tests", function () {
 
 
 
-    it("Has pRecordRecord defined", function () {
-        expect( aRecordingPolicy.pRecordRecord).not.toBeUndefined();
-    });
-
-    it("Has pRecordRecord typeof function", function () {
-        expect( typeof aRecordingPolicy.pRecordRecord).toBe( "function");
-    });
-
-
 
     it("Has fRecorder defined", function () {
         expect( aRecordingPolicy.fRecorder).not.toBeUndefined();

@@ -153,6 +153,15 @@ describe("prettytypes-ng console_svce structural tests", function () {
 
 
 
+    it("Has fCollectedLogsCopy defined", function () {
+        expect( aConsoleSvce.fCollectedLogs).not.toBeUndefined();
+    });
+
+    it("Has fCollectedLogsCopy typeof function", function () {
+        expect( typeof aConsoleSvce.fCollectedLogs).toBe( "function");
+    });
+
+
 });
 
 

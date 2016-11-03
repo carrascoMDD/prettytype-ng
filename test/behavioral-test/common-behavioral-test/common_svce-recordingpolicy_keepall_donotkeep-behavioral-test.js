@@ -66,6 +66,13 @@ describe("prettytypes-ng CommonSvce recording policy keep all do not keep behavi
     var aDetail2     = "common_svce_test_recordingpolicykeepall__theDetail2";
 
 
+
+    var aRecordPointerName_keepall_01         = "recordPointerName_keepall_01";
+    var aRecordPointerName_keepall_02         = "recordPointerName_keepall_02";
+    var aRecordPointerName_keepall_03         = "recordPointerName_keepall_03";
+
+
+
     var aCommonSvce             = null;
     var aCommon_Recorder        = null;
     var aCommon_Identifier      = null;
@@ -80,7 +87,13 @@ describe("prettytypes-ng CommonSvce recording policy keep all do not keep behavi
     var aKeptRecord_1 = null;
     var aKeptRecord_2 = null;
     var someKeptRecordsAfterFinalClear = null;
-    
+
+    var aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = null;
+    var aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord = null;
 
 
 
@@ -99,7 +112,7 @@ describe("prettytypes-ng CommonSvce recording policy keep all do not keep behavi
 
 
 
-        aRecordingPolicyKeepAll = new _RecordingPolicyKeepAllType_.RecordingPolicyKeepAll_Constructor( "RecordingPolicy-for-common_svce-recordingpolicy_keepall-donotkeep-behavioral-test.js", aCommon_Identifier, aCommon_Recorder)
+        aRecordingPolicyKeepAll = new _RecordingPolicyKeepAllType_.RecordingPolicyKeepAll_Constructor( "RecordingPolicy-for-common_svce-recordingpolicy_keepall-donotkeep-behavioral-test.js", aCommon_Identifier, aCommon_Recorder);
 
         aRecordingPolicyKeepAll.pSetMustKeepRecords( false);
 
@@ -121,9 +134,45 @@ describe("prettytypes-ng CommonSvce recording policy keep all do not keep behavi
 
         someKeptRecordsBefore = aCommon_Recorder.fKeptRecords();
 
+
+
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_keepall_01, null /* point to last record */);
+        aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_01);
+
+
+
+
+
+
+
         aRecord = aCommonSvce.fRecord( aMethodName, anEventKind, aData, aReason, aDetail);
 
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_keepall_02, null /* point to last record */);
+
+        aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_01);
+        aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_02);
+
+
+
+
+
+
+
+
         otherRecord = aCommonSvce.fRecord( aMethodName2, anEventKind2, aData2, aReason2, aDetail2);
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_keepall_03, null /* point to last record */);
+
+        aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_01);
+        aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_02);
+        aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepall_03);
+
+
 
 
         someKeptRecords = aCommon_Recorder.fKeptRecords();
@@ -197,6 +246,13 @@ describe("prettytypes-ng CommonSvce recording policy keep all do not keep behavi
         expect( otherRecord._v_Detail).toBe( aDetail2);
 
 
+
+        expect( aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord).toBe( -1);
 
         
     });

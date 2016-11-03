@@ -66,6 +66,9 @@ describe("prettytypes-ng CommonSvce recording policy keep some behavioral tests"
     var aReason     = "common_svce_test_recordingpolicykeepall__theReason";
     var aDetail     = "common_svce_test_recordingpolicykeepall__theDetail";
 
+    var aRecordPointerName_keepsome_01         = "recordPointerName_keepsome_01";
+    var aRecordPointerName_keepsome_02         = "recordPointerName_keepsome_02";
+
 
     var aCommonSvce             = null;
     var aCommon_Recorder        = null;
@@ -80,7 +83,13 @@ describe("prettytypes-ng CommonSvce recording policy keep some behavioral tests"
     var aKeptRecord_1 = null;
     var aKeptRecord_2 = null;
     var someKeptRecordsAfterFinalClear = null;
-    
+
+    var aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = null;
+    var aCommon_Recorder_SetRecordingPointer_01_afterExactlyMaxRecords = null;
+    var aCommon_Recorder_SetRecordingPointer_02_afterExactlyMaxRecords = null;
+
+
+
 
 
 
@@ -99,7 +108,7 @@ describe("prettytypes-ng CommonSvce recording policy keep some behavioral tests"
 
 
 
-        aRecordingPolicyKeepSome = new _RecordingPolicyKeepSomeType_.RecordingPolicyKeepSome_Constructor( "RecordingPolicy-for-common_svce-recordingpolicy_keepsome-behavioral-test.js", aCommon_Identifier, aCommon_Recorder)
+        aRecordingPolicyKeepSome = new _RecordingPolicyKeepSomeType_.RecordingPolicyKeepSome_Constructor( "RecordingPolicy-for-common_svce-recordingpolicy_keepsome-behavioral-test.js", aCommon_Identifier, aCommon_Recorder);
 
         aRecordingPolicyKeepSome.pSetMustKeepRecords( true);
         aRecordingPolicyKeepSome.pSetMustKeepRecordsMaxNumber( aMustKeepRecordsMaxNumber);
@@ -121,12 +130,29 @@ describe("prettytypes-ng CommonSvce recording policy keep some behavioral tests"
 
 
 
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_keepsome_01, null /* point to last record */);
+        aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepsome_01);
+
+
+
+
         for( var aSubmittedRecordIdx=0; aSubmittedRecordIdx < aNumRecordsToSubmit; aSubmittedRecordIdx++) {
 
             var aPrefix = "0000" + aSubmittedRecordIdx;
             aPrefix = aPrefix.substr( aPrefix.length - 4);
             var aSubmittedRecord = aCommonSvce.fRecord( aMethodName + aPrefix, anEventKind + aPrefix, aData + aPrefix, aReason + aPrefix, aDetail + aPrefix);
         }
+
+
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_keepsome_02, null /* point to last record */);
+
+        aCommon_Recorder_SetRecordingPointer_01_afterExactlyMaxRecords = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepsome_01);
+        aCommon_Recorder_SetRecordingPointer_02_afterExactlyMaxRecords = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_keepsome_02);
+
 
 
         someKeptRecords = aCommon_Recorder.fKeptRecords();
@@ -170,8 +196,11 @@ describe("prettytypes-ng CommonSvce recording policy keep some behavioral tests"
         expect( someKeptRecordsAfterFinalClear).not.toBeNull();
         expect( someKeptRecordsAfterFinalClear.length).toBe( 0);
 
-        
-        
+
+        expect( aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_01_afterExactlyMaxRecords).toBe( -2);
+        expect( aCommon_Recorder_SetRecordingPointer_02_afterExactlyMaxRecords).toBe( 9);
+
     });
 
 

@@ -329,6 +329,70 @@ describe("prettytypes-ng DumpingPolicyFilterKinds structural tests", function ()
 
 
 
+    it("Has fEventKindsNotForConsole defined", function () {
+        expect( aDumpingPolicyFilterKinds.fEventKindsNotForConsole).not.toBeUndefined();
+    });
+
+    it("Has fEventKindsNotForConsole typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fEventKindsNotForConsole).toBe( "function");
+    });
+
+
+
+    it("Has fSetEventKindsNotForConsole defined", function () {
+        expect( aDumpingPolicyFilterKinds.fSetEventKindsNotForConsole).not.toBeUndefined();
+    });
+
+    it("Has fSetEventKindsNotForConsole typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fSetEventKindsNotForConsole).toBe( "function");
+    });
+
+    it("Has fFewerEventKindsForConsole defined", function () {
+        expect( aDumpingPolicyFilterKinds.fFewerEventKindsForConsole).not.toBeUndefined();
+    });
+
+    it("Has fFewerEventKindsForConsole typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fFewerEventKindsForConsole).toBe( "function");
+    });
+
+    it("Has fMoreEventKindsForConsole defined", function () {
+        expect( aDumpingPolicyFilterKinds.fMoreEventKindsForConsole).not.toBeUndefined();
+    });
+
+    it("Has fMoreEventKindsForConsole typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fMoreEventKindsForConsole).toBe( "function");
+    });
+
+
+
+    it("Has fSetEventKindsNotForConsole_inPrototype defined", function () {
+        expect( aDumpingPolicyFilterKinds.fSetEventKindsNotForConsole_inPrototype).not.toBeUndefined();
+    });
+
+    it("Has fSetEventKindsNotForConsole_inPrototype typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fSetEventKindsNotForConsole_inPrototype).toBe( "function");
+    });
+
+    it("Has fFewerEventKindsForConsole_inPrototype defined", function () {
+        expect( aDumpingPolicyFilterKinds.fFewerEventKindsForConsole_inPrototype).not.toBeUndefined();
+    });
+
+    it("Has fFewerEventKindsForConsole_inPrototype typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fFewerEventKindsForConsole_inPrototype).toBe( "function");
+    });
+
+    it("Has fMoreEventKindsForConsole_inPrototype defined", function () {
+        expect( aDumpingPolicyFilterKinds.fMoreEventKindsForConsole_inPrototype).not.toBeUndefined();
+    });
+
+    it("Has fMoreEventKindsForConsole_inPrototype typeof function", function () {
+        expect( typeof aDumpingPolicyFilterKinds.fMoreEventKindsForConsole_inPrototype).toBe( "function");
+    });
+
+
+
+
+
     it("Has pRelease defined", function () {
         expect( aDumpingPolicyFilterKinds.pRelease).not.toBeUndefined();
     });

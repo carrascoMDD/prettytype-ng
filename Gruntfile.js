@@ -46,6 +46,7 @@ module.exports = function(grunt) {
                     'src/identifying/recordingpolicy_keeprecent_ng_type.js',
                     'src/identifying/dumpingpolicy_ng_type.js',
                     'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
+                    'src/identifying/dumpingpolicy_triggerkinds_ng_type.js',
 
                     'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',
@@ -116,6 +117,7 @@ module.exports = function(grunt) {
                     'src/identifying/recordingpolicy_keeprecent_ng_type.js',
                     'src/identifying/dumpingpolicy_ng_type.js',
                     'src/identifying/dumpingpolicy_filterkinds_ng_type.js',
+                    'src/identifying/dumpingpolicy_triggerkinds_ng_type.js',
 
                     'src/identifying/recorder_ng_type.js',
                     'src/identifying/recorder_svce.js',

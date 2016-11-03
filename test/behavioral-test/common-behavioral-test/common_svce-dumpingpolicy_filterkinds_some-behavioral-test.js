@@ -53,17 +53,22 @@ describe("prettytypes-ng CommonSvce dumping policy filterkinds some behavioral t
     var aBeforeRecordMillis = new Date().getMilliseconds();
 
 
-    var aMethodName = "common_svce_test_recordingpolicykeepall__theMethodName";
-    var anEventKind = "common_svce_test_recordingpolicykeepall__theEventKind";
-    var aData       = "common_svce_test_recordingpolicykeepall__theData";
-    var aReason     = "common_svce_test_recordingpolicykeepall__theReason";
-    var aDetail     = "common_svce_test_recordingpolicykeepall__theDetail";
+    var aMethodName = "common_svce_test_dumpingpolicyfilterkindssome__theMethodName";
+    var anEventKind = "common_svce_test_dumpingpolicyfilterkindssome__theEventKind";
+    var aData       = "common_svce_test_dumpingpolicyfilterkindssome__theData";
+    var aReason     = "common_svce_test_dumpingpolicyfilterkindssome__theReason";
+    var aDetail     = "common_svce_test_dumpingpolicyfilterkindssome__theDetail";
 
-    var aMethodName2 = "common_svce_test_recordingpolicykeepall__theMethodName2";
-    var anEventKind2 = "common_svce_test_recordingpolicykeepall__theEventKind2";
-    var aData2       = "common_svce_test_recordingpolicykeepall__theData2";
-    var aReason2     = "common_svce_test_recordingpolicykeepall__theReason2";
-    var aDetail2     = "common_svce_test_recordingpolicykeepall__theDetail2";
+    var aMethodName2 = "common_svce_test_dumpingpolicyfilterkindssome__theMethodName2";
+    var anEventKind2 = "common_svce_test_dumpingpolicyfilterkindssome__theEventKind2";
+    var aData2       = "common_svce_test_dumpingpolicyfilterkindssome__theData2";
+    var aReason2     = "common_svce_test_dumpingpolicyfilterkindssome__theReason2";
+    var aDetail2     = "common_svce_test_dumpingpolicyfilterkindssome__theDetail2";
+
+
+    var aRecordPointerName_filterkinds_01 = "recordPointerName_filterkinds_01";
+    var aRecordPointerName_filterkinds_02 = "recordPointerName_filterkinds_02";
+    var aRecordPointerName_filterkinds_03 = "recordPointerName_filterkinds_03";
 
 
     var aCommonSvce             = null;
@@ -84,6 +89,21 @@ describe("prettytypes-ng CommonSvce dumping policy filterkinds some behavioral t
     var aCommon_Recorder_SetDumpingPolicy_MayDumpRecords =  null;
 
 
+
+    var aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = null;
+    var aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_beforeAnyRecords = null;
+    var aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterFirstRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord = null;
+    var aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterSecondRecord = null;
+
+
+
+
+
     beforeEach( inject(function( _CommonSvce_, _ConsoleSvce_, _DumpingPolicyFilterKindsType_) {
 
         // console.log( "typeof _CommonSvceType_= " + typeof _CommonSvceType_);
@@ -100,7 +120,7 @@ describe("prettytypes-ng CommonSvce dumping policy filterkinds some behavioral t
 
 
 
-        aDumpingPolicyFilterKinds = new _DumpingPolicyFilterKindsType_.DumpingPolicyFilterKinds_Constructor( "DumpingPolicy-for-common_svce-dumpingpolicy_filterkinds_all-behavioral-test.js", aCommon_Identifier, aCommon_Recorder)
+        aDumpingPolicyFilterKinds = new _DumpingPolicyFilterKindsType_.DumpingPolicyFilterKinds_Constructor( "DumpingPolicy-for-common_svce-dumpingpolicy_filterkinds_some-behavioral-test.js", aCommon_Identifier, aCommon_Recorder);
 
         aDumpingPolicyFilterKinds.pSetMayDumpRecords( true);
         aDumpingPolicyFilterKinds.fSetEventKindsNotForConsole( [ anEventKind2]);
@@ -119,26 +139,69 @@ describe("prettytypes-ng CommonSvce dumping policy filterkinds some behavioral t
 
         _ConsoleSvce_.clear();
 
-        someCollectedLogsBefore = _ConsoleSvce_.fCollectedLogs();
+        someCollectedLogsBefore = _ConsoleSvce_.fCollectedLogsCopy();
         aNumCollectedLogsBefore = someCollectedLogsBefore.length;
 
 
 
         aBeforeRecordMillis = new Date().getMilliseconds();
 
-  
+
+
+
+
+
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_filterkinds_01, null /* point to last record */);
+
+        aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_01);
+
+        aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_beforeAnyRecords = aCommon_Recorder.fGetRecordPointerNamed( aCommon_Recorder_SetDumpingPolicy.RECORDPOINTERNAME_LASTDUMPED);
+
+
+
+
+
 
         aRecord = aCommonSvce.fRecord( aMethodName, anEventKind, aData, aReason, aDetail);
 
 
 
-        someCollectedLogsAfter1 = _ConsoleSvce_.fCollectedLogs();
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_filterkinds_02, null /* point to last record */);
+
+        aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_01);
+        aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_02);
+        aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterFirstRecord = aCommon_Recorder.fGetRecordPointerNamed( aCommon_Recorder_SetDumpingPolicy.RECORDPOINTERNAME_LASTDUMPED);
+
+
+
+
+
+
+        someCollectedLogsAfter1 = _ConsoleSvce_.fCollectedLogsCopy();
         aNumCollectedLogsAfter1 = someCollectedLogsAfter1.length;
+
+
+
+
 
 
         otherRecord = aCommonSvce.fRecord( aMethodName2, anEventKind2, aData2, aReason2, aDetail2);
 
-        someCollectedLogsAfter2 = _ConsoleSvce_.fCollectedLogs();
+
+        aCommon_Recorder.pSetRecordPointer( aRecordPointerName_filterkinds_03, null /* point to last record */);
+
+
+        aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_01);
+        aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_02);
+        aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aRecordPointerName_filterkinds_03);
+        aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterSecondRecord = aCommon_Recorder.fGetRecordPointerNamed( aCommon_Recorder_SetDumpingPolicy.RECORDPOINTERNAME_LASTDUMPED);
+
+
+
+
+        someCollectedLogsAfter2 = _ConsoleSvce_.fCollectedLogsCopy();
         aNumCollectedLogsAfter2 = someCollectedLogsAfter2.length;
 
 
@@ -214,6 +277,19 @@ describe("prettytypes-ng CommonSvce dumping policy filterkinds some behavioral t
 
 
         expect( aNumCollectedLogsAfter2).toBe( 1);
+
+
+
+        expect( aCommon_Recorder_SetRecordingPointer_01_beforeAnyRecords).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_01_afterFirstRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_02_afterFirstRecord).toBe( 0);
+        expect( aCommon_Recorder_SetRecordingPointer_01_afterSecondRecord).toBe( -1);
+        expect( aCommon_Recorder_SetRecordingPointer_02_afterSecondRecord).toBe( 0);
+        expect( aCommon_Recorder_SetRecordingPointer_03_afterSecondRecord).toBe( 1);
+        expect( aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_beforeAnyRecords).toBe( undefined);
+        expect( aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterFirstRecord).toBe( 0);
+        expect( aCommon_Recorder_SetRecordingPointer_LastDumpedRecord_afterSecondRecord).toBe( 0);
+
 
     });
 
