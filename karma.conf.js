@@ -30,11 +30,6 @@ module.exports = function(config){
 
              'bower_components/prettytype/src/commoneventkinds.js',
              'bower_components/prettytype/src/common/common_type.js',
-             'bower_components/prettytype/src/common/prominstrexception.js',
-             'bower_components/prettytype/src/common/prominstr_type.js',
-             'bower_components/prettytype/src/common/withprominstr_type.js',
-             'bower_components/prettytype/src/common/common_ctrl_type.js',
-             'bower_components/prettytype/src/common/common_svce_type.js',
 
              'bower_components/prettytype/src/identifying/identifier_type.js',
              'bower_components/prettytype/src/identifying/record_type.js',
@@ -95,15 +90,13 @@ module.exports = function(config){
             'src/commoneventkinds_ng.js',
             'src/common/prominstrexception.js',
             'src/common/common_ng_type.js',
-            'src/common/prominstr_ng_type.js',
+            'src/common/prominstr_type.js',
             'src/common/prominstr_svce.js',
-            'src/common/withprominstr_ng_type.js',
-            'src/common/common_svce_ng_type.js',
+            'src/common/withprominstr_type.js',
+            'src/common/common_svce_type.js',
             'src/common/common_svce.js',
-            'src/common/common_ctrl_ng_type.js',
+            'src/common/common_ctrl_type.js',
             'src/common/common_ctrl.js',
-
-
 
 
 

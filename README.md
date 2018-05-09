@@ -1,0 +1,2 @@
+# prettytype-ng
+Angular Wrappers as Controllers and Services on prettytype Javascript skeletons for modules including a base prototype and prototypes hierarchy, intended to be reused. Used i.e. in the SpringNut.org example. http://www.springnut.org/springnut
