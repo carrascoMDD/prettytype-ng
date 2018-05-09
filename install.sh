@@ -8,6 +8,6 @@ npm install
 
 
 # installs from public repositories into bower_components the ones specified in bower.json 
-bower install
+npm run bower install
 
 
